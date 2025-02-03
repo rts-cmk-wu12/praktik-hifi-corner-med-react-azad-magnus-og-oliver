@@ -1,7 +1,7 @@
 import {useRoutes} from "react-router";
 import routes from '~react-pages'
 
-const AzadApp = () => {
+export const App = () => {
     return (
         <>
             {useRoutes(routes)}
