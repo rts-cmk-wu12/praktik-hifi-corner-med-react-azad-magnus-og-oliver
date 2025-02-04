@@ -18,7 +18,7 @@ function Navbar() {
                         <li><a className="navbar__link" href="/brand-page">BRANDS</a></li>
                         <li><a className="navbar__link" href="/blog">BLOG</a></li>
                         <li><a className="navbar__link" href="/events">EVENTS</a></li>
-                        <li><a className="navbar__link" href="/product-page">SHOP</a></li>
+                        <li><a className="navbar__link" href="/shop-page">SHOP</a></li>
                         <li><a className="navbar__link" href="/contact">CONTACT US</a></li>            </ul>        </nav>
             </header>
         </>
