@@ -1,6 +1,7 @@
 const BrandPage = () => {
     return (
-        <><div>
+        <>
+        <div>
             brand-page
         </div></>
     )
