@@ -1,37 +1,35 @@
-import "../style/style.css";
-
+import "../style/style.scss";
+import { WorldPay, Visa, MasterCard, Jcb, PayPal } from "../GetIcons";
+import { Facebook, Youtube, Twitter } from "../GetIcons";
 
 function Footer() {
     return (  
-        <footer>
-            <div className="footer_container">
-                <div className="footer_container_left">
-                    <ul>
-                        <li>Hi-Fi Corner</li>
-                        <li>Edinburgh 2 Joppa Road EH15 2EU</li>
-                        <li>Falkirk 44 Cow Wynd FK1 1PU</li>
+        <footer className="footer">
+            <div className="footer__container">
+                <div className="footer__container-left">
+                    <ul className="footer__list">
+                        <li className="footer__list-item">Hi-Fi Corner</li>
+                        <li className="footer__list-item">Edinburgh 2 Joppa Road EH15 2EU</li>
+                        <li className="footer__list-item">Falkirk 44 Cow Wynd FK1 1PU</li>
                     </ul>
 
-                    <div>
-                        <a href="#">Returns & Refunds <span>|</span></a> <a href="#">Privacy Policy</a> 
+                    <div className="footer__links">
+                        <a href="#" className="footer__link">Returns & Refunds <span className="footer__separator">|</span></a> <a href="#" className="footer__link">Privacy Policy</a> 
                     </div>
                 </div>
 
-                <div className="footer_container_right">
-                    <div className="footer_container_right_payments">
-                        <img src="footerpics/worldpay.png" alt="" />
-                        <img src="footerpics/visa.png" alt="" />
-                        <img src="footerpics/mastercard.png" alt="" />
-                        <img src="footerpics/maestro.png" alt="" />
-                        <img src="footerpics/jcb.png" alt="" />
-                        <img src="footerpics/brand-paypal.png" alt="" />
-                    </div>
+                <div className="footer__container-right">
+                    <div className="footer__payments">
+                        <WorldPay className="footer__payment-icon"/>
+                        <Visa className="footer__payment-icon"/>
+                        <MasterCard className="footer__payment-icon"/>
+                        <Jcb className="footer__payment-icon"/>
+                        <PayPal className="footer__payment-icon"/>                    </div>
 
-                    <div className="footer_container_right_socials">
-                        <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i className="fa-brands fa-youtube"></i></a>
-                        <a href="#"><i className="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i className="fa-brands fa-instagram"></i></a>
+                    <div className="footer__socials">
+                        <a href="#" className="footer__social-link"><Facebook /></a>
+                        <a href="#" className="footer__social-link"><Youtube /></a>
+                        <a href="#" className="footer__social-link"><Twitter /></a>
                     </div>
                 </div>
             </div>
