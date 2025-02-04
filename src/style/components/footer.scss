@@ -1,0 +1,52 @@
+header {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.footer {
+  list-style: none;
+  padding: 1em;
+  font-family: 'Roboto', sans-serif;
+  background-color: #a39161;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: white;
+      font-size: 12px;
+    }
+
+    &-left {
+      display: flex;
+      gap: 4em;
+
+      ul {
+        font-weight: 600;
+        list-style: none;
+        font-size: 10px;
+      }
+    }
+
+    &-right {
+      display: flex;
+      gap: 15em;
+    }
+  }
+
+  &__payments {
+    gap: 0.5em;
+    display: flex;
+    width: 45px;
+    height: 20px;
+  }
+
+  &__socials {
+    a {
+      border-radius: 50%;
+      padding: 0.5em;
+      border: 1px solid white;
+    }
+  }
+}
