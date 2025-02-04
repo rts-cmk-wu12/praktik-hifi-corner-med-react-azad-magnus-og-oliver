@@ -37,7 +37,7 @@ function Navbar() {
                                 className={({ isActive }) => `navbar__link navbar__link${isActive ? '--active' : ''}`}>EVENTS</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/product-page"
+                            <NavLink to="/shop-page"
                                 className={({ isActive }) => `navbar__link navbar__link${isActive ? '--active' : ''}`}>SHOP</NavLink>
                         </li>
                         <li>
