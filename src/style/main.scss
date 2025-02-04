@@ -1,5 +1,5 @@
-@import 'base/fonts';
-@import 'brands-media';
+@use 'base/fonts';
+@use 'brands-media';
 
 * {
   margin: 0;
@@ -28,7 +28,6 @@
     margin-bottom: 3rem;
 
     .hero {
-
       &__centerDiv {
         width: 194px;
       }
