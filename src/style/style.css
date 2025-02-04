@@ -1,7 +1,14 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
 header {
     font-family: 'Roboto', sans-serif;
 }
+
 /*Her kommer css koden til burgermenuen*/
+
 .topnav {
     height: 3em;
     justify-content: right;
