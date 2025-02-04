@@ -1,4 +1,4 @@
-import "../style/style.scss";
+import "../style/components/footer.scss"
 import { WorldPay, Visa, MasterCard, Jcb, PayPal } from "../GetIcons";
 import { Facebook, Youtube, Twitter } from "../GetIcons";
 

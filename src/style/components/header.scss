@@ -1,0 +1,48 @@
+.topnav {
+  height: 3em;
+  justify-content: right;
+  padding-right: 1em;
+  background-color: black;
+  border-bottom: solid 1px #413a27;
+  align-items: center;
+  display: flex;
+  gap: 2em;
+
+  p {
+    color: white;
+  }
+
+  &__button {
+    font-size: 10px;
+    color: white;
+    padding: 0.5em;
+    background-color: #1ba4f3;
+    border: none;
+    border-radius: 5px;
+  }
+
+  &__black-line {
+    color: black;
+  }
+}
+
+.navbar {
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 4em;
+  display: flex;
+
+  &__list {
+    li {
+      display: none;
+    }
+  }
+
+  &__link {
+    &--active {
+      color: #a29160;
+    }
+  }
+}

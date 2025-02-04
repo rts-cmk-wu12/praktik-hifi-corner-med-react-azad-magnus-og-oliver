@@ -6,10 +6,6 @@ export const App = () => {
     return (
         <>
             {useRoutes(routes)}
-
-           
-            
-
         </>
     )
 }

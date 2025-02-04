@@ -1,4 +1,4 @@
-import '../style/style.scss'
+import '../style/components/header.scss'
 import { LocationMark, Phone, Email } from '../GetIcons.jsx'
 
 function Navbar() {
