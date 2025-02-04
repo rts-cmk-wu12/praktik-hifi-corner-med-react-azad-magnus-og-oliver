@@ -7,13 +7,12 @@
 
 .brand {
   font-family: 'Museo Sans Rounded 700';
-  min-height: 100vh;
   background-image: url('../img/højtaler.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: black;
-  padding: 2rem;
+  padding-top: 2rem;
 
   &__container {
     max-width: 1500px;
@@ -73,7 +72,6 @@
 
   &__subsection {
     background: linear-gradient(to right, #000000, #222222);
-    
     flex: 1;
     max-width: 600px;
   }
