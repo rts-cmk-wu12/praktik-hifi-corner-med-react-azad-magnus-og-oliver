@@ -1,7 +1,7 @@
 const ShopPage = () => {
     return (
         <><div>
-            ...
+           
         </div>
         </>
     )
