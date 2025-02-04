@@ -1,6 +1,6 @@
 import "../style/components/footer.scss"
 import { WorldPay, Visa, MasterCard, Jcb, PayPal } from "../GetIcons";
-import { Facebook, Youtube, Twitter } from "../GetIcons";
+import { Facebook, Youtube, Twitter, Instagram} from "../GetIcons";
 
 function Footer() {
     return (  
@@ -30,6 +30,7 @@ function Footer() {
                         <a href="#" className="footer__social-link"><Facebook /></a>
                         <a href="#" className="footer__social-link"><Youtube /></a>
                         <a href="#" className="footer__social-link"><Twitter /></a>
+                        <a href="#" className="footer__social-link"><Instagram/></a>
                     </div>
                 </div>
             </div>
