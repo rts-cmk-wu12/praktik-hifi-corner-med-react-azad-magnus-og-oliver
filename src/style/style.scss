@@ -8,7 +8,7 @@ header {
 }
 
 .topnav {
-    height: 3em;
+    padding: 1em;
     justify-content: right;
     padding-right: 1em;
     background-color: black;
@@ -22,6 +22,8 @@ header {
     }
 
     &__button {
+        display: flex;
+        align-items: center;
         font-size: 10px;
         color: white;
         padding: 0.5em;
@@ -31,25 +33,29 @@ header {
     }
 
     &__black-line {
-        color: black;
+        color: grey;
     }
 }
 
 .navbar {
-    font-size: 13px;
+    font-size: 14px;
     justify-content: center;
     align-items: center;
     background-color: black;
-    height: 4em;
+    padding: 1.5em;
     display: flex;
 
     &__list {
-        li {
-            display: none;
-        }
+        list-style: none;
+        display: flex;
+        gap: 2em;
+        margin: 0;
+        padding: 0;
     }
 
     &__link {
+        color: white;
+        text-decoration: none;
         &--active {
             color: #a29160;
         }
@@ -58,12 +64,14 @@ header {
 
 .footer {
     list-style: none;
+    
     padding: 1em;
     font-family: 'Roboto', sans-serif;
     background-color: #a39161;
 
     &__container {
         display: flex;
+        align-items: center;
         justify-content: space-between;
 
         a {
@@ -73,7 +81,7 @@ header {
 
         &-left {
             display: flex;
-            gap: 4em;
+            gap: 3em;
 
             ul {
                 font-weight: 600;
@@ -84,15 +92,17 @@ header {
 
         &-right {
             display: flex;
-            gap: 15em;
+            align-items: center;
+            gap: 2em;
         }
     }
 
     &__payments {
+        color: white;
+        font-size: 1.5em;
         gap: 0.5em;
         display: flex;
-        width: 45px;
-        height: 20px;
+        padding: 0.5em;
     }
 
     &__socials {
