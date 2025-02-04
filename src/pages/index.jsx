@@ -5,7 +5,7 @@ const index = () => {
         <>
         <Navbar/>
         <div>
-            Azad er god til at kode
+
         </div>
         <Footer/>
         </>
