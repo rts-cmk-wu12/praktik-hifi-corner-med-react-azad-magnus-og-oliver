@@ -1,5 +1,5 @@
 import Navbar from "../components/navbar"
-import "../style/style.scss"
+import "../style/main.scss"
 
 const BrandPage = () => {
     return (

@@ -1,7 +1,6 @@
 .topnav {
-  height: 3em;
+  padding: 1em;
   justify-content: right;
-  padding-right: 1em;
   background-color: black;
   border-bottom: solid 1px #413a27;
   align-items: center;
@@ -31,16 +30,30 @@
   justify-content: center;
   align-items: center;
   background-color: black;
-  height: 4em;
+  padding: 1.5em;
   display: flex;
 
   &__list {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+    
     li {
-      display: none;
+      display: flex;
+      align-items: center;
+      
     }
   }
 
   &__link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #a29160;
+    }
+
     &--active {
       color: #a29160;
     }
