@@ -8,10 +8,14 @@
   gap: 2em;
 
   p {
+    
+    font-size: 1.2em;
     color: white;
   }
 
   &__button {
+    display: flex;
+    align-items: center;
     font-size: 10px;
     color: white;
     padding: 0.5em;
@@ -21,7 +25,7 @@
   }
 
   &__black-line {
-    color: black;
+    color: grey;
   }
 }
 
