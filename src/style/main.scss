@@ -1,5 +1,116 @@
+@import 'base/fonts';
+
 * {
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.brand {
+  font-family: 'Museo Sans Rounded 700';
+  background-image: url('../img/højtaler.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  padding-top: 2rem;
+
+  &__container {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+
+    .hero {
+      &__centerDiv {
+        width: 194px;
+      }
+
+      &__text {
+        padding-top: 0.3rem;
+        color: white;
+      }
+
+      &__textBox {
+        height: 198px;
+        padding: 0.5rem;
+        align-content: end;
+        border: 1px solid white;
+        color: white;
+        font-size: 2rem;
+        font-family: 'Museo Sans Rounded 700';
+      }
+    }
+
+    &-text {
+      font-family: 'Museo Sans Rounded 300';
+      color: white;
+      font-size: 2rem;
+    }
+  }
+
+  &__section {
+    background-color: white;
+    padding: 2rem;
+
+    &-container {
+      background-image: url('../img/speaker-wallpaper-1920x1080.jpg');
+      background-size: cover;
+      background-position: center;
+      background-color: rgb(0, 0, 0);
+    }
+
+    &-flex {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+
+  &__subsection {
+    background: linear-gradient(to right, #000000, #222222);
+    flex: 1;
+    max-width: 600px;
+  }
+
+  &__logos {
+    margin: 1em;
+
+    p {
+      font-family: 'Museo Sans Rounded 300';
+      color: #a29160;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  &__content {
+    margin-top: 1em;
+    margin-bottom: 5em;
+    flex: 2;
+    max-width: 700px
+  }
+
+  &__text {
+    &-heading {
+      font-family: 'Museo Sans Rounded 300';
+      font-size: 2em;
+      margin-bottom: 1rem;
+      color: #a29160;
+    }
+
+    p {
+      font-family: 'Museo Sans Rounded 300';
+      color: white;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+  }
+
+  &__link {
+    color: #a29160;
+  }
 }
