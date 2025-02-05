@@ -5,6 +5,7 @@ const ShopPage = () => {
     return (
         <>
         <Navbar />
+        <main className="main-in-shop-page">
         <div>
         <div className="grid-container">
 
@@ -99,6 +100,7 @@ const ShopPage = () => {
 
 </div>
 </div>
+</main>
 
          <Footer/>
         

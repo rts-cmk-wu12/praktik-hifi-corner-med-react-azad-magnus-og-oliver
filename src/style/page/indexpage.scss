@@ -1,0 +1,100 @@
+@use "../variables" as config;
+
+.index {
+  height: 100vh;
+  max-height: 400px;
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+
+  &__container {
+    display: flex;
+    align-items: self-end;
+    height: 150px;
+    border: 2px white solid;
+  }
+
+  &__title {
+    display: inline-block;
+    max-width: min-content;
+    padding: 5px;
+  }
+}
+
+.background-navigation {
+  background-image: url("/img/headset.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: url("/img/indexpage.png");
+  background-size: cover;
+  height: 250px;
+  &__title {
+    font-family: config.$MuseoFont300;
+    font-size: 2.5em;
+    text-align: center;
+    max-width: 1200px;
+  }
+}
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 300px;
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-arrow {
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    &.left {
+      left: 10px;
+    }
+
+    &.right {
+      right: 10px;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 10px;
+    position: absolute;
+  }
+}

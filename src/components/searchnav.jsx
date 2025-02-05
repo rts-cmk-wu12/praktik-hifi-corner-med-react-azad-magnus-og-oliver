@@ -1,25 +1,30 @@
-import '../style/components/header.scss'
-import { LocationMark, Phone, Email } from '../GetIcons.jsx'
-import { NavLink } from 'react-router'
+import { NavLink } from "react-router-dom";
+import "../style/components/searchnav.scss"
+import { Account, Email, LocationMark, Phone, Cart, Search } from "../GetIcons";
+import Logo from "../img/logo.png";
+import "../style/main.scss";
 
-function Navbar() {
+function SearchNav() {
     return (
         <>
             <header>
-                <div className="topnav">
-                    
-                    
-                    <NavLink className={"navlink"} to= "/contact">
-                    <p><LocationMark /></p>
-                    <p><Phone /></p>
-                    <p><Email /></p>
-                    </NavLink>
-                
-                  
-
-
-                    <button className="topnav__button"><Email /><span className="topnav__black-line">|</span>Subscribe
-                    </button>
+                <div className="searchnav__topnav">
+                    <div className="searchnav__logo">
+                        <img src={Logo} alt="hifi logo" />
+                    </div>
+                    <div className="searchnav__search">
+                        <div className="searchnav__input-wrapper">
+                            <input type="text" className="searchnav__input" placeholder="Search the entire store here..." />
+                            <div className="searchnav__icon searchnav__icon--inside">
+                                <Search />
+                            </div>
+                        </div>
+                    </div>
+                    <p className="searchnav__symbol-account"><Account /> <span className="searchnav__text">Account</span></p>
+                    <p className="searchnav__symbol-cart"><Cart /> <span className="searchnav__text">Cart</span></p>
+                    <p className="searchnav__symbol"><LocationMark /></p>
+                    <p className="searchnav__symbol"><Phone /></p>
+                    <p className="searchnav__symbol"><Email /></p>
                 </div>
                 <nav className="navbar">
                     <ul className="navbar__list">
@@ -59,4 +64,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default SearchNav;
