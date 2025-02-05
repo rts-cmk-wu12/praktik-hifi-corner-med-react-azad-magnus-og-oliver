@@ -7,9 +7,17 @@ function Navbar() {
         <>
             <header>
                 <div className="topnav">
+                    
+                    
+                    <NavLink className={"navlink"} to= "/contact">
                     <p><LocationMark /></p>
                     <p><Phone /></p>
                     <p><Email /></p>
+                    </NavLink>
+                
+                  
+
+
                     <button className="topnav__button"><Email /><span className="topnav__black-line">|</span>Subscribe
                     </button>
                 </div>
