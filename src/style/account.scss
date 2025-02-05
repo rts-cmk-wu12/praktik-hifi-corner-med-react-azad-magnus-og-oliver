@@ -1,0 +1,53 @@
+@import "base/fonts";
+
+.customer_info {
+  text-align: center;
+  min-height: 100vh;
+  margin-top: 50px;
+  font-family: "Museo Sans Rounded 700";
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+  }
+
+  .form_group {
+    margin-bottom: 20px;
+  }
+
+  .form_group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .form_group input {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  .form_group input:focus {
+    outline: none;
+    border-color: #a49372;
+  }
+
+  button {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    background-color: #a39161;
+    color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: blue;
+  }
+}

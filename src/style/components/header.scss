@@ -8,7 +8,6 @@
   gap: 2em;
 
   p {
-    
     font-size: 1.2em;
     color: white;
   }
@@ -41,11 +40,10 @@
     display: flex;
     list-style: none;
     gap: 2em;
-    
+
     li {
       display: flex;
       align-items: center;
-      
     }
   }
 
@@ -62,4 +60,9 @@
       color: #a29160;
     }
   }
+}
+
+.navlink {
+  display: flex;
+  gap: 20px;
 }
