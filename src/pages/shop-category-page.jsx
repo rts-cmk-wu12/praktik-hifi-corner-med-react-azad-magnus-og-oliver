@@ -1,8 +1,12 @@
+import SearchNav from "../components/searchnav"
 const ShopCategoryPage = () => {
     return (
-        <><div>
+        <>
+        <SearchNav/>
+        <div>
             Shop Category Page
-        </div></>
+        </div>
+        </>
     )
 }
 
