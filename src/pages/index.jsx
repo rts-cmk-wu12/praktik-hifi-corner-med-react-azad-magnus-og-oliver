@@ -2,6 +2,7 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import "../style/page/indexpage.scss";
 import {Carousel} from "../components/carousel.jsx";
+import Logo from "../img/logo-white.svg";
 
 const index = () => {
     return (
@@ -12,9 +13,9 @@ const index = () => {
 
                     <section className="index">
                         <div className="index__container">
-                            <h2 className="index__title">HI FI</h2>
+                            <img src={Logo} alt="" />
                         </div>
-                        <p className="index__subtitle">HIFICORNER.CO.UK</p>
+                        
                     </section>
                 </main>
             </div>

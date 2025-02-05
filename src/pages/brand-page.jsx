@@ -2,7 +2,7 @@ import Footer from "../components/footer"
 import Navbar from "../components/navbar"
 import brands from "../img/brands.png"
 import "../style/main.scss"
-
+import Logo from "../img/logo-white.svg"
 const BrandPage = () => {
     return (
         <>
@@ -11,7 +11,8 @@ const BrandPage = () => {
                 <section className="brand__container">
                     <article className="brand__top">
                         <h2 className="brand__top-text">TOP BRANDS</h2>
-                        <div className="brand__hero">
+                        <img src={Logo} alt="" />
+                        {/* <div className="brand__hero">
                            <div className="hero__centerDiv">
                             <div className="hero__textBox">
                                 <h1 className="hero__heading">HI <br /> FI
@@ -19,7 +20,7 @@ const BrandPage = () => {
                             </div>
                             <p className="hero__text">HIFICORNER.CO.UK</p>
                         </div> 
-                        </div>
+                        </div> */}
                         
                     </article>
 
