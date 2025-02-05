@@ -46,7 +46,7 @@ const BrandPage = () => {
                                             few.</p>
                                         <p>With over a hundred brands, we can happily say that if a brand meets our high standards
                                             for sound reproduction, then you can be assured to find it at Hi-Fi Corner.</p>
-                                        <a className="brand__link" href="/product-page">VISIT OUR SHOP TO FIND MORE BRANDS </a>
+                                        <a className="brand__link" href="/shop-page">VISIT OUR SHOP TO FIND MORE BRANDS </a>
                                     </div>
                                 </section>
                             </article>
