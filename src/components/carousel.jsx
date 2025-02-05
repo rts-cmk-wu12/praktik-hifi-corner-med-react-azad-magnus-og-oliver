@@ -4,11 +4,14 @@ import { FaArrowRight as ArrowRight, FaArrowLeft as ArrowLeft } from "react-icon
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import slide1 from "/public/img/slide1.jpg"
+import slide2 from "/public/img/slide2.jpg"
+import slide3 from "/public/img/slide3.jpg"
 
 const images = [
-    "https://imageplaceholder.net/1920x1080",
-    "https://imageplaceholder.net/1920x1080",
-    "https://imageplaceholder.net/1920x1080",
+    slide1,
+    slide2,
+    slide3,
 ];
 
 export const Carousel = () => {
