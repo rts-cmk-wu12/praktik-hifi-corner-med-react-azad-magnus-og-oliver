@@ -1,6 +1,8 @@
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import "../style/page/indexpage.scss"
+import "../style/page/indexpage.scss";
+import {Carousel} from "../components/carousel.jsx";
+
 const index = () => {
     return (
         <>
@@ -16,6 +18,12 @@ const index = () => {
                     </section>
                 </main>
             </div>
+            <section className="image-section">
+                <h2 className="image-section__title">OUR EDINBURGH SHOWROOM HAS NOW MOVED TO STUNNING NEW PREMISES ON JOPPA ROAD</h2>
+            </section>
+
+           <Carousel/>
+
             <Footer/>
         </>
     )
