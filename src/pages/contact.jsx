@@ -13,15 +13,15 @@ const Contact = () => {
         <>
 
 <Navbar />
-          <h1>Get in Touch </h1>
+          <h1 className="headline-in-contact">Get in Touch </h1>
        <div className="contact-information-section">
   
   <div className="contact-information-wrapper"> 
     <address>
    
         <p className="city-name"><>Edinburgh</> </p>
-        <p><CiPhone /> <a href="0131 556 7901">0131 556 7901</a></p>
-        <p><CiMail /> <a href="mailto:sales@hificorner.co.uk">sales@hificorner.co.uk</a></p>
+        <p><CiPhone /> <a className="a-tags-in-contact" href="0131 556 7901">0131 556 7901</a></p>
+        <p><CiMail /> <a className="a-tags-in-contact" href="mailto:sales@hificorner.co.uk">sales@hificorner.co.uk</a></p>
         <p><><CiLocationOn /></> 2 Joppa Rd, Edinburgh, EH15 2EU</p>
         <p><><CiClock2 /></> Mon - Sat: 10am - 5:30pm, Sun closed</p>
     </address>
@@ -43,8 +43,8 @@ const Contact = () => {
    
         <p className="city-name"><>Falkirk </> </p>
         <p><></>  </p>
-        <p><CiPhone /> <a href="01324 629 011">01324 629 011</a></p>
-        <p><CiMail /> <a href="mailto:falkirk@hificorner.co.uk">falkirk@hificorner.co.uk</a></p>
+        <p><CiPhone /> <a className="a-tags-in-contact"  href="01324 629 011">01324 629 011</a></p>
+        <p><CiMail /> <a className="a-tags-in-contact" href="mailto:falkirk@hificorner.co.uk">falkirk@hificorner.co.uk</a></p>
         <p><><CiLocationOn /></> 44 Cow Wynd, Falkirk Central Region, FK1 1PU</p>
         <p><><CiClock2 /></> Mon - Sat: 10am -5:30pm. Sat appointment only. Sun closed.</p>
     </address>
