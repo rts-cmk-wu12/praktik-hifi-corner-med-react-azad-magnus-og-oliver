@@ -6,6 +6,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   font-family: "Museo Sans Rounded 300";
+  width: 100%;
 
   address {
     font-size: 1.2rem;
@@ -21,6 +22,7 @@
   iframe {
     border: none;
     width: 500px;
+    max-width: 100%;
     height: 100%;
     border-radius: 0 10px 10px 0;
   }
@@ -48,4 +50,27 @@
   margin-top: 50px;
   font-size: 3rem;
   font-family: "Museo Sans Rounded 700";
+}
+
+@media (max-width: 1000px) {
+  .contact-information-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 100px;
+  }
+
+  address {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+  }
 }
