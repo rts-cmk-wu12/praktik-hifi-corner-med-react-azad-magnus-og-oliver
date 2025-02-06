@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "../style/components/searchnav.scss"
 import { Account, Email, LocationMark, Phone, Cart, Search } from "../GetIcons";
-import Logo from "../img/logo.png";
+import Logo from "../img/logo-white.svg";
 import "../style/main.scss";
 
 function SearchNav() {

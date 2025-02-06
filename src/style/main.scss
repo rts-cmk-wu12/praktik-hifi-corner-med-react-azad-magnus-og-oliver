@@ -6,6 +6,36 @@
   box-sizing: border-box;
 }
 
+
+.background-navigation > *, .image-section > *, .carousel > *, .footer > *, .brand > *, .grid-container > *, header > * {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeIn ease-in-out 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.grid__items {
+  transition: 1s;
+
+  &:hover {
+    cursor: pointer;
+    scale: 1.125;
+    z-index: 5;
+  }
+}
+
+
 // Brands
 .brand {
   font-family: 'Museo Sans Rounded 700';
@@ -27,26 +57,7 @@
     justify-content: space-between;
     margin-bottom: 3rem;
 
-    .hero {
-      &__centerDiv {
-        width: 194px;
-      }
-
-      &__text {
-        padding-top: 0.3rem;
-        color: white;
-      }
-
-      &__textBox {
-        height: 198px;
-        padding: 0.5rem;
-        align-content: end;
-        border: 1px solid white;
-        color: white;
-        font-size: 2rem;
-        font-family: 'Museo Sans Rounded 700';
-      }
-    }
+   
 
     &-text {
       font-family: 'Museo Sans Rounded 300';
