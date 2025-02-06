@@ -1,4 +1,4 @@
-@import "../components/header-media.scss";
+@use "header-media.scss";
 .topnav {
   padding: 1em;
   justify-content: right;
