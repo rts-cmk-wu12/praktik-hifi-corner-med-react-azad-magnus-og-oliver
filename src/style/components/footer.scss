@@ -38,6 +38,7 @@ header {
       width: 100%;
 
       @media (min-width: 480px) {
+        justify-content: space-between;
         gap: 2em;
       }
 
