@@ -20,13 +20,6 @@
   color: white;
 
 
-  &__container {
-    display: flex;
-    align-items: self-end;
-    height: 150px;
-    border: 2px white solid;
-  }
-
   &__title {
     display: inline-block;
     max-width: min-content;
