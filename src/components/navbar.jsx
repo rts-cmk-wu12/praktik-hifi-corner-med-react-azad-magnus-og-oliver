@@ -1,28 +1,37 @@
 import '../style/components/header.scss'
+import '../style/components/header-media.scss'
 import { LocationMark, Phone, Email } from '../GetIcons.jsx'
 import { NavLink } from 'react-router'
+import { useState } from 'react'
+
 
 function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <>
             <header>
                 <div className="topnav">
-                    
-                    
                     <NavLink className={"navlink"} to= "/contact">
                     <p><LocationMark /></p>
                     <p><Phone /></p>
                     <p><Email /></p>
                     </NavLink>
-                
-                  
-
-
-                    <button className="topnav__button"><Email /><span className="topnav__black-line">|</span>Subscribe
-                    </button>
+            
+                    <NavLink to="/subscribe" className="topnav__button"><Email /><span className="topnav__black-line">|</span>Subscribe
+                    </NavLink>
                 </div>
                 <nav className="navbar">
-                    <ul className="navbar__list">
+                    <div className="burger-menu" onClick={toggleMenu}>
+                        <div className={`burger-bar ${isOpen ? 'open' : ''}`}></div>
+                        <div className={`burger-bar ${isOpen ? 'open' : ''}`}></div>
+                        <div className={`burger-bar ${isOpen ? 'open' : ''}`}></div>
+                    </div>
+                    <ul className={`navbar__list ${isOpen ? 'open' : ''}`}>
                         <li>
                             <NavLink to="/"
                                 className={({ isActive }) => `navbar__link navbar__link${isActive ? '--active' : ''}`}>HOME</NavLink>
