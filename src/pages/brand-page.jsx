@@ -11,7 +11,7 @@ const BrandPage = () => {
                 <section className="brand__container">
                     <article className="brand__top">
                         <h2 className="brand__top-text">TOP BRANDS</h2>
-                        <img src={Logo} alt="" />
+                        <img className={"brand__top-logo"} src={Logo} alt="" />
                         {/* <div className="brand__hero">
                            <div className="hero__centerDiv">
                             <div className="hero__textBox">
