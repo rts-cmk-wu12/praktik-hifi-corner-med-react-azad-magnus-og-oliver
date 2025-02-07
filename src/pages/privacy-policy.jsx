@@ -1,8 +1,11 @@
 const PrivacyPage = () => {
     return (
-        <><div>
+        <>
+        <div>
             
-        </div></>
+        </div>
+        
+    </>
     )
 }
 
