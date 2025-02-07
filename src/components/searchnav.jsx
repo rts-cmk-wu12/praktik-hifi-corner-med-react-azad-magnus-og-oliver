@@ -3,8 +3,15 @@ import "../style/components/searchnav.scss"
 import { Account, Email, LocationMark, Phone, Cart, Search } from "../GetIcons";
 import Logo from "../img/logo-white.svg";
 import "../style/main.scss";
+import { useState } from 'react';
 
 function SearchNav() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <>
             <header>
@@ -27,7 +34,12 @@ function SearchNav() {
                     <p className="searchnav__symbol"><Email /></p>
                 </div>
                 <nav className="navbar">
-                    <ul className="navbar__list">
+                    <div className="burger-menu-cart" onClick={toggleMenu}>
+                        <div className={`burger-bar-cart ${isOpen ? 'open' : ''}`}></div>
+                        <div className={`burger-bar-cart ${isOpen ? 'open' : ''}`}></div>
+                        <div className={`burger-bar-cart ${isOpen ? 'open' : ''}`}></div>
+                    </div>
+                    <ul className={`navbar__list ${isOpen ? 'open' : ''}`}>
                         <li>
                             <NavLink to="/"
                                 className={({ isActive }) => `navbar__link navbar__link${isActive ? '--active' : ''}`}>HOME</NavLink>
