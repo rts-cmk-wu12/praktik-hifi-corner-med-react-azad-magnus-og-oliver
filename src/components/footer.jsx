@@ -1,6 +1,7 @@
 import "../style/components/footer.scss"
 import { WorldPay, Visa, MasterCard, Jcb, PayPal } from "../GetIcons";
 import { Facebook, Youtube, Twitter, Instagram} from "../GetIcons";
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (  
@@ -14,7 +15,13 @@ function Footer() {
                     </ul>
 
                     <div className="footer__links">
-                        <a href="#" className="footer__link">Returns & Refunds <span className="footer__separator">|</span></a> <a href="#" className="footer__link">Privacy Policy</a> 
+                        <Link to="/returns-refunds">
+                        <a href="#" className="footer__link">Returns & Refunds <span className="footer__separator">| </span></a>
+                        </Link>
+
+                        <Link to="/privacy-policy"> 
+                        <a href="#" className="footer__link">Privacy Policy</a> 
+                        </Link>
                     </div>
                 </div>
 
