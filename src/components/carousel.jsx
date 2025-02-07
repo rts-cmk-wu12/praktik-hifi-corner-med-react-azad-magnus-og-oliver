@@ -14,10 +14,27 @@ const images = [
     slide3,
 ];
 
-
-
+const easter_egg = [
+    "aHR0cHM6Ly9pLmltZ3VyLmNvbS8yenhxWnhWLnBuZw==",
+]
 
 export const Carousel = () => {
+
+    // if mouse is clicking 10 times within 10 seconds show easter egg
+    let click = 0;
+
+    const handleClick = (e) => {
+        if (click >= 10) {
+            e.target.src = atob(easter_egg[0])
+            click = 0
+        }
+        setTimeout(() => {click = 0}, 5000)
+        click++
+    };
+
+
+
+
     return (
         <div className="carousel">
             <Swiper
@@ -34,7 +51,7 @@ export const Carousel = () => {
             >
                 {images.map((src, index) => (
                     <SwiperSlide key={index}>
-                        <img src={src} alt={`Slide ${index}`} className="carousel-img" />
+                        <img onClick={handleClick} src={src} alt={`Slide ${index}`} className="carousel-img" />
                     </SwiperSlide>
                 ))}
             </Swiper>

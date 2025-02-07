@@ -3,6 +3,8 @@ import Navbar from "../components/navbar";
 import "../style/page/indexpage.scss";
 import {Carousel} from "../components/carousel.jsx";
 import Logo from "../img/logo-white.svg";
+import {Socialcomponent} from "../components/socialcomponent.jsx";
+import {ExploreSection} from "../components/explore-section.jsx";
 
 const index = () => {
     return (
@@ -25,6 +27,8 @@ const index = () => {
 
            <Carousel/>
 
+            <Socialcomponent></Socialcomponent>
+            <ExploreSection></ExploreSection>
             <Footer/>
         </>
     )
