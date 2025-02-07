@@ -8,12 +8,14 @@
   margin-top: 20px;
   margin-bottom: 20px;
   font-family: "Museo Sans Rounded 300";
-  width: 100%;
+  max-width: 100%;
 
   address {
     font-size: 1.2rem;
     padding: 20px;
-    width: 600px;
+    max-width: 600px;
+    min-width: 100px;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
