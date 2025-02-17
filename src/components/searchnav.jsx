@@ -27,11 +27,16 @@ function SearchNav() {
                             </div>
                         </div>
                     </div>
-                    <p className="searchnav__symbol-account"><Account /> <span className="searchnav__text">Account</span></p>
-                    <p className="searchnav__symbol-cart"><Cart /> <span className="searchnav__text">Cart</span></p>
-                    <p className="searchnav__symbol"><LocationMark /></p>
-                    <p className="searchnav__symbol"><Phone /></p>
-                    <p className="searchnav__symbol"><Email /></p>
+
+                    <NavLink className={"link__account"} to={"/account"}><p className="searchnav__symbol-account"><Account /> <span className="searchnav__text">Account</span></p></NavLink>
+                    <NavLink className={"link__cart"} to={"/cart"}><p className="searchnav__symbol-cart"><Cart /> <span className="searchnav__text">Cart</span></p></NavLink>
+
+
+                    <NavLink className={"searchnav__symbol-contact"} to="/contact">
+                        <p className="searchnav__symbol"><LocationMark /></p>
+                        <p className="searchnav__symbol"><Phone /></p>
+                        <p className="searchnav__symbol"><Email /></p>
+                    </NavLink>
                 </div>
                 <nav className="navbar">
                     <div className="burger-menu-cart" onClick={toggleMenu}>

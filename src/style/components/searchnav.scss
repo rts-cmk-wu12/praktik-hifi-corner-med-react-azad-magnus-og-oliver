@@ -6,6 +6,7 @@
 
 .searchnav {
     &__topnav {
+
         padding: 1em;
         justify-content: right;
         background-color: black;
@@ -19,6 +20,15 @@
             gap: 1em;
             flex-wrap: wrap;
         }
+
+        .link {
+            &__account, &__cart {
+                color: black;
+            }
+        }
+
+
+
     }
 
     &__text {
@@ -104,6 +114,8 @@
         }
     }
 
+
+
     &__symbol {
         font-size: 1.3em;
         color: white;
@@ -117,7 +129,14 @@
         &:hover {
             color: #a29160;
         }
+
+        &-contact {
+            display: flex;
+        }
+
+
     }
+
 
     &__symbol-cart,
     &__symbol-account {
