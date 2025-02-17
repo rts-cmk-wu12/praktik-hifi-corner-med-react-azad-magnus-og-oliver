@@ -17,7 +17,8 @@ function SearchNav() {
             <header>
                 <div className="searchnav__topnav">
                     <div className="searchnav__logo">
-                        <img src={Logo} alt="hifi logo" />
+                       
+                         <NavLink to={"/"}><img src={Logo} alt="hifi logo" /></NavLink>
                     </div>
                     <div className="searchnav__search">
                         <div className="searchnav__input-wrapper">
