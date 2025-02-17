@@ -1,6 +1,6 @@
 @use 'base/fonts';
 @use 'brands-media';
-
+@use 'variables' as config;
 * {
   margin: 0;
   box-sizing: border-box;
@@ -57,12 +57,17 @@
     justify-content: space-between;
     margin-bottom: 3rem;
 
+
+    &-logo {
+      min-width: 100px;
+      max-width: 100%;
+    }
    
 
     &-text {
       font-family: 'Museo Sans Rounded 300';
-      color: white;
       font-size: 2rem;
+      color: config.$GoldFontColor;
     }
   }
 
@@ -94,7 +99,7 @@
 
     p {
       font-family: 'Museo Sans Rounded 300';
-      color: #a29160;
+      color: config.$GoldFontColor;
       margin-bottom: 1.5rem;
       font-size: 1rem;
     }
@@ -112,7 +117,7 @@
       font-family: 'Museo Sans Rounded 300';
       font-size: 2em;
       margin-bottom: 1rem;
-      color: #a29160;
+      color: config.$GoldFontColor;
     }
 
     p {
@@ -124,7 +129,7 @@
   }
 
   &__link {
-    color: #a29160;
+    color: config.$GoldFontColor;
   }
 }
 
@@ -175,7 +180,7 @@
 
     &:focus {
       outline: none;
-      border-color: #a29160;
+      border-color: config.$GoldFontColor;
     }
   }
 
@@ -235,7 +240,7 @@
   &__checkout-btn {
     width: 100%;
     padding: 1rem;
-    background-color: #a29160;
+    background-color: config.$GoldFontColor;
     color: white;
     border: none;
     border-radius: 4px;

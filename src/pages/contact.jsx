@@ -13,6 +13,8 @@ const Contact = () => {
         <>
 
 <Navbar />
+
+<div className="background-img-to-contact-page">
           <h1 className="headline-in-contact">Get in Touch </h1>
        <div className="contact-information-section">
   
@@ -56,6 +58,7 @@ const Contact = () => {
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2231.2172149863513!2d-3.785564022768693!3d55.99759007310992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48887a24df9c1377%3A0xd0bf6627c034e3ac!2s44%20Cow%20Wynd%2C%20Falkirk%20FK1%201PU%2C%20Storbritannien!5e0!3m2!1sda!2sdk!4v1738749044115!5m2!1sda!2sdk"
     ></iframe>
     </div>
+</div>
 </div>
 </div>
 <Footer/>

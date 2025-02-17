@@ -6,7 +6,7 @@ import Logo from "../img/logo-white.svg";
 import {Socialcomponent} from "../components/socialcomponent.jsx";
 import {ExploreSection} from "../components/explore-section.jsx";
 
-const index = () => {
+const IndexPage = () => {
     return (
         <>
             <div className={"background-navigation"}>
@@ -34,4 +34,4 @@ const index = () => {
     )
 }
 
-export default index;
+export default IndexPage;
