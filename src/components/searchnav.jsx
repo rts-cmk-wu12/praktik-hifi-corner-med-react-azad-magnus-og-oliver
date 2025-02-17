@@ -17,7 +17,8 @@ function SearchNav() {
             <header>
                 <div className="searchnav__topnav">
                     <div className="searchnav__logo">
-                        <img src={Logo} alt="hifi logo" />
+                       
+                         <NavLink to={"/"}><img src={Logo} alt="hifi logo" /></NavLink>
                     </div>
                     <div className="searchnav__search">
                         <div className="searchnav__input-wrapper">
@@ -27,11 +28,16 @@ function SearchNav() {
                             </div>
                         </div>
                     </div>
-                    <p className="searchnav__symbol-account"><Account /> <span className="searchnav__text">Account</span></p>
-                    <p className="searchnav__symbol-cart"><Cart /> <span className="searchnav__text">Cart</span></p>
-                    <p className="searchnav__symbol"><LocationMark /></p>
-                    <p className="searchnav__symbol"><Phone /></p>
-                    <p className="searchnav__symbol"><Email /></p>
+
+                    <NavLink className={"link__account"} to={"/account"}><p className="searchnav__symbol-account"><Account /> <span className="searchnav__text">Account</span></p></NavLink>
+                    <NavLink className={"link__cart"} to={"/cart"}><p className="searchnav__symbol-cart"><Cart /> <span className="searchnav__text">Cart</span></p></NavLink>
+
+
+                    <NavLink className={"searchnav__symbol-contact"} to="/contact">
+                        <p className="searchnav__symbol"><LocationMark /></p>
+                        <p className="searchnav__symbol"><Phone /></p>
+                        <p className="searchnav__symbol"><Email /></p>
+                    </NavLink>
                 </div>
                 <nav className="navbar">
                     <div className="burger-menu-cart" onClick={toggleMenu}>
@@ -45,7 +51,7 @@ function SearchNav() {
                                 className={({ isActive }) => `navbar__link navbar__link${isActive ? '--active' : ''}`}>HOME</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/about"
+                            <NavLink to="/about-us"
                                 className={({ isActive }) => `navbar__link navbar__link${isActive ? '--active' : ''}`}>ABOUT
                                 US</NavLink>
                         </li>
@@ -62,10 +68,9 @@ function SearchNav() {
                                 className={({ isActive }) => `navbar__link navbar__link${isActive ? '--active' : ''}`}>EVENTS</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/shop-page"
+                            <NavLink to="/shop-category-page"
                                 className={({ isActive }) => `navbar__link navbar__link${isActive ? '--active' : ''}`}>SHOP</NavLink>
-                        </li>
-                        <li>
+                        </li>                        <li>
                             <NavLink to="/contact"
                                 className={({ isActive }) => `navbar__link navbar__link${isActive ? '--active' : ''}`}>CONTACT</NavLink>
                         </li>
