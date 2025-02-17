@@ -32,7 +32,7 @@ Et HI-FI produkt består af et navn, en beskrivelse, en pris, et billede, samt h
 * Programmér funktioner til dataudtræk
 * Byg alle nødvendige fetch, og udskriv data fra fetch.
 * Opret datafiler (JSON)
-* Dokumentér kode og funktionalitet i markdown-filer 
+* Dokumentér kode og funktionalitet i markdown-filer
 
 
 ### Sider og indhold
@@ -41,30 +41,36 @@ Et HI-FI produkt består af et navn, en beskrivelse, en pris, et billede, samt h
 * Shop-kategorier
 * Kategori-liste
 * Enkelt produktvisning
- 
-### Forsiden 
+
+### Forsiden
 * Forsidetekst og billeder af produkter
 * Visning af ét eller flere udvalgte produkter (kan være de senest oprettede, et tilfældigt produkt eller andet du finder relevant)
- 
+
 ### Produktsider
 Der er flere forskellige funktioner under produkter:
 * Visning af alle produkter inden for en bestemt kategori, uden produkt beskrivelse
 * Visning af alle produkter der hører til en bestemt producent, uden produkt beskrivelse
 * Visning af ét produkt ved klik på et produkt fra listerne
-* Visning af produkter efter søgning 
+* Visning af produkter efter søgning
+# React + Vite
 
 Alle produkter hentes via et "API"(JSON) og udskrives med fetch, alle produkter vises med deres billede.
- 
-### Alle sider 
-* Menu 
-* Fritekst-søgefunktion til produkter og producenter (visning på produktsiden) 
-* Footer med kontaktinfo 
+
+### Alle sider
+* Menu
+* Fritekst-søgefunktion til produkter og producenter (visning på produktsiden)
+* Footer med kontaktinfo
+  This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
 
 ### Github
 * <strike>Projektet opsættes i et GitHub repo - husk at invitere din lærer som collaborator.</strike>
 * Projektet accepteres som en GitHub assignment.
 * Der skal *committes ved væsentlige ændringer eller færdiggørelse af en funktionalitet* - og altid inden fyraften.
 * Alle commit tekster på GitHub skal kort beskrive ændringerne. **Der må ikke skrives ligegyldige beskrivelser!**.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ### Billedfiler
 Alle billeder ligger i en zippet fil fordelt i mapper.
@@ -73,7 +79,7 @@ I vælger om alle billeder skal ligge i én mappe eller om I vil bevare mappestr
 
 Brug følgende liste, hvis I er i tvivl om hvilke kategorier de forskellige billeder tilhører:
 
-  
+
 **CD Afspillere**
 
     * creek_classic_cd.jpg
@@ -139,8 +145,9 @@ Brug følgende liste, hvis I er i tvivl om hvilke kategorier de forskellige bill
     * jolida_JD300b.jpg
     * jolida_JD302b.jpg
     * jolida_JD502b.jpg 
- 
+
 ## EKSTRAOPGAVE
 Hvis I er hurtigt færdige!
 
 Indsæt reklmebannere på hjemmesiden. Du skal selv beslutte hvor på siden reklamebannere vil passe ind. Find et API på nettet, som lader dig fetche bannere og indsæt vilkårlige bannere på hjemmesiden.
+
