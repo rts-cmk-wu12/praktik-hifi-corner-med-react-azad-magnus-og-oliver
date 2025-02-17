@@ -62,10 +62,9 @@ function SearchNav() {
                                 className={({ isActive }) => `navbar__link navbar__link${isActive ? '--active' : ''}`}>EVENTS</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/shop-page"
+                            <NavLink to="/shop-category-page"
                                 className={({ isActive }) => `navbar__link navbar__link${isActive ? '--active' : ''}`}>SHOP</NavLink>
-                        </li>
-                        <li>
+                        </li>                        <li>
                             <NavLink to="/contact"
                                 className={({ isActive }) => `navbar__link navbar__link${isActive ? '--active' : ''}`}>CONTACT</NavLink>
                         </li>
