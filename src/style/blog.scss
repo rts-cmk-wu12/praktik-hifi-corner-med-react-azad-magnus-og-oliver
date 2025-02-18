@@ -86,7 +86,7 @@
             }
 
             &:hover {
-                color: adjust-color($color: #bfad7a, $lightness: 10%);
+                color: color.adjust($color: #bfad7a, $lightness: 10%);
             }
         }
 
