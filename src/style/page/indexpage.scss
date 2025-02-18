@@ -135,21 +135,17 @@
 
 .explore-section {
   background-color: #111;
-  max-height: max-content;
   padding: 80px 0;
   width: 100%;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 50px;
-
+  justify-content: center;
+  flex-wrap: wrap;
   &__content {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    max-width: 400px;
+    height: max-content;
 
     .explore-section__title {
       font-size: 1.5em;
@@ -157,7 +153,7 @@
       text-align: center;
       margin-bottom: 10px;
       border: 1px solid #fff;
-      padding: 5px;
+      padding: 8px;
 
       a {
         text-decoration: none;

@@ -15,13 +15,8 @@ function Footer() {
                     </ul>
 
                     <div className="footer__links">
-                        <Link to="/returns-refunds">
-                        <a href="#" className="footer__link">Returns & Refunds <span className="footer__separator">| </span></a>
-                        </Link>
-
-                        <Link to="/privacy-policy"> 
-                        <a href="#" className="footer__link">Privacy Policy</a> 
-                        </Link>
+                        <Link to="/returns-refunds" className="footer__link">Returns & Refunds <span className="footer__separator">| </span></Link>
+                        <Link to="/privacy-policy" className="footer__link">Privacy Policy</Link>
                     </div>
                 </div>
 
@@ -34,10 +29,18 @@ function Footer() {
                         <PayPal className="footer__payment-icon"/>                    </div>
 
                     <div className="footer__socials">
-                        <a href="#" className="footer__social-link"><Facebook /></a>
-                        <a href="#" className="footer__social-link"><Youtube /></a>
-                        <a href="#" className="footer__social-link"><Twitter /></a>
-                        <a href="#" className="footer__social-link"><Instagram/></a>
+                        <a href="https://www.facebook.com/HiFiCorner" className="footer__social-link" target="_blank">
+                            <Facebook />
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCY21Dx3ibHem-kL3G0hmOmQ" className="footer__social-link" target="_blank">
+                            <Youtube />
+                        </a>
+                        <a href="https://x.com/hifi_corner" className="footer__social-link" target="_blank">
+                            <Twitter />
+                        </a>
+                        <a href="https://www.instagram.com/hifi_corner/" className="footer__social-link" target="_blank">
+                            <Instagram />
+                        </a>
                     </div>
                 </div>
             </div>

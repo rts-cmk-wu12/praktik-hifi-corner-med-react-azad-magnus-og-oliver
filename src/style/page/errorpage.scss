@@ -1,5 +1,5 @@
 @use '../variables' as config;
-
+@use "sass:color";
 
 .error-page {
   display: flex;
@@ -37,7 +37,7 @@
     transition: 0.3s ease-in-out;
 
     &:hover {
-      background: adjust-color(config.$GoldFontColor, $lightness: -20%);
+      background: color.adjust(config.$GoldFontColor, $lightness: -20%);
       transform: scale(1.05);
     }
   }

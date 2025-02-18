@@ -10,7 +10,7 @@ const PrivacyPage = () => {
        <div className="privacy-policy-box">
        <div className="pic-in-policy">
         <h1 className="headline-in-policy">Privacy Policy</h1>
-        </div>   
+        </div>
 
 
 
@@ -24,7 +24,7 @@ General Data Protection Regulation
 <h2>Our data is kept secure and is restricted to your address,phone number and email.</h2>
 
 <p>
-We do not store any payment details for security purposes and will not share this with any third-party organisation. Unless legally required, we will not share any of your personal data. If you have agreed for us to use your email you will be added to our customer database. 
+We do not store any payment details for security purposes and will not share this with any third-party organisation. Unless legally required, we will not share any of your personal data. If you have agreed for us to use your email you will be added to our customer database.
 </p>
 
 <h3>We use this database to;</h3>
