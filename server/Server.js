@@ -19,6 +19,7 @@ app.use(express.json());
 app.use(cors({
     origin: true,
 }));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.use(limiter);
 
@@ -107,6 +108,6 @@ const signalHandler = async (signal)  => {
 ["SIGINT", "SIGTERM", "SIGQUIT"].forEach(signal => process.on(signal, signalHandler))
 
 
-app.listen(3000, '0.0.0.0', () => {
+app.listen(3000,() => {
     console.log("Running on port: http://localhost:3000 ");
 });
