@@ -21,6 +21,7 @@ app.use(express.json());
 app.use(cors({
     origin: true,
 }));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 
 const __filename = fileURLToPath(import.meta.url);
