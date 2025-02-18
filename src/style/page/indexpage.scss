@@ -1,0 +1,179 @@
+@use "../variables" as config;
+@use "../mixins/mediaqueries" as mediaqueries;
+
+@include mediaqueries.media(0px, 1024px) {
+  .image-section__title {
+    font-size: 1.5em !important;
+  }
+}
+
+
+.index {
+  height: 100vh;
+  max-height: 400px;
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+
+
+  &__title {
+    display: inline-block;
+    max-width: min-content;
+    padding: 5px;
+  }
+}
+
+.background-navigation {
+  background-image: url("/img/headset.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: url("/img/indexpage.png");
+  background-size: cover;
+  height: 250px;
+
+  &__title {
+    font-family: config.$MuseoFont300;
+    font-size: 2.5em;
+    text-align: center;
+    max-width: 1200px;
+  }
+}
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: move; // This is just a fallback incase if cursor is unsupported
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  .carousel-arrow {
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a39261;
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+
+    &:hover {
+      color: #6b5e38;
+    }
+  }
+}
+
+@include mediaqueries.media(0px, 800px) {
+  .carousel {
+    height: 200px;
+  }
+}
+
+
+.swiper-pagination-bullet-active {
+  background-color: #6b5e38 !important;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.76);
+}
+
+.socialcomponent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 100%;
+
+  &__image {
+    height: 250px;
+    padding: 20px;
+  }
+
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        background-image: url("/img/social-#{$i}.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+  }
+}
+
+
+.explore-section {
+  background-color: #111;
+  padding: 80px 0;
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+
+    .explore-section__title {
+      font-size: 1.5em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 10px;
+      border: 1px solid #fff;
+      padding: 8px;
+
+      a {
+        text-decoration: none;
+        color: config.$GoldFontColor;
+        font-family: config.$MuseoFont300;
+      }
+
+    }
+    .explore-section__paragraph {
+      font-family: config.$MuseoFont300;
+      text-align: center;
+      max-width: 300px;
+      color: #ffffff;
+    }
+  }
+}
+
+
+@include mediaqueries.media(0px, 800px) {
+  .socialcomponent {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 100%))
+  }
+}
