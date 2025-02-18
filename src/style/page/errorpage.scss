@@ -1,5 +1,5 @@
 @use '../variables' as config;
-
+@use "sass:color";
 
 .error-page {
   display: flex;
