@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @keyframes flyDown {
     0% {
         opacity: 1;
@@ -106,7 +108,7 @@
         letter-spacing: 1px;
 
         &:hover {
-            background-color: darken(#a29160, 10%);
+            background-color: color.adjust($color: #a29160, $lightness: 10%);
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(162, 145, 96, 0.4);
         }
