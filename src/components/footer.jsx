@@ -15,13 +15,8 @@ function Footer() {
                     </ul>
 
                     <div className="footer__links">
-                        <Link to="/returns-refunds">
-                        <a href="#" className="footer__link">Returns & Refunds <span className="footer__separator">| </span></a>
-                        </Link>
-
-                        <Link to="/privacy-policy"> 
-                        <a href="#" className="footer__link">Privacy Policy</a> 
-                        </Link>
+                        <Link to="/returns-refunds" className="footer__link">Returns & Refunds <span className="footer__separator">| </span></Link>
+                        <Link to="/privacy-policy" className="footer__link">Privacy Policy</Link>
                     </div>
                 </div>
 
