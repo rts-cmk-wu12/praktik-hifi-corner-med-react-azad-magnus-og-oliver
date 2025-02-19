@@ -5,10 +5,14 @@
   min-height: 100vh;
   margin-top: 50px;
   font-family: "Museo Sans Rounded 700";
+  padding: 0 20px;
 
   h1 {
     margin-bottom: 20px;
     font-size: 3rem;
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
 
   .form_group {
@@ -28,6 +32,9 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
   }
 
   .form_group input:focus {
@@ -44,6 +51,9 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 20px;
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
   }
 
   .form_signupbutton {
@@ -53,9 +63,10 @@
     font-size: 1rem;
     font-weight: 600;
     color: #a39161;
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
   }
-
-
 
   @keyframes slideDown {
     0% {
@@ -70,7 +81,6 @@
       visibility: visible;
     }
   }
-
 
   #signup-form {
     display: none;
