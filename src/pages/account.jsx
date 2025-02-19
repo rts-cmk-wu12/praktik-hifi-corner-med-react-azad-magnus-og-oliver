@@ -1,12 +1,12 @@
 import "../style/account.scss";
 import Footer from "../components/footer"
-import Navbar from "../components/navbar"
+import SearchNav from "../components/searchnav"
 
 
 const Account = () => {
     return (
         <>
-            <Navbar />
+            <SearchNav />
             <div class="customer_info">
                 <div id="customer_wrapper" className="customer_wrapper">
                     <h1>Log in</h1>
