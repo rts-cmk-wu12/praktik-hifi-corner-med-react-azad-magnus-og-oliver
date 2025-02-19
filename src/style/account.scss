@@ -35,7 +35,7 @@
     border-color: #a49372;
   }
 
-  button {
+  .form_loginbutton {
     width: 100%;
     max-width: 500px;
     padding: 10px;
@@ -46,8 +46,43 @@
     margin-bottom: 20px;
   }
 
-  a {
-    text-decoration: none;
-    color: blue;
+  .form_signupbutton {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #a39161;
+  }
+
+
+
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      max-height: 0;
+      display: none;
+    }
+
+    100% {
+      opacity: 1;
+      max-height: 1000px;
+      visibility: visible;
+    }
+  }
+
+
+  #signup-form {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+
+  #signup-form.show {
+    display: block;
+    animation: slideDown 1s ease-in-out forwards;
   }
 }

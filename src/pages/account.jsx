@@ -7,28 +7,52 @@ const Account = () => {
     return (
         <>
             <Navbar />
-        <div class="customer_info">
-        <h1>Log in</h1>
-        <form>
-            <div class="form_group">
-                <label for="name">E-mail:</label>
-                <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form_group">
-                <label for="Password">Password:</label>
-                <input type="text" id="Password" name="Password" required />
-                
-            </div>
-            <button>Log in</button>
-            <p>Don't have an account? <a href="#">Sign up</a> </p>
-        </form>
-    </div>
-    <Footer />
+            <div class="customer_info">
+                <div id="customer_wrapper" className="customer_wrapper">
+                    <h1>Log in</h1>
+                    <form>
+                        <div id="form_group" class="form_group">
+                            <label for="name">E-mail:</label>
+                            <input type="text" id="name" name="name" required />
+                        </div>
+                        <div id="form_group" class="form_group">
+                            <label for="Password">Password:</label>
+                            <input type="text" id="Password" name="Password" required />
 
-        
-        
-        
-        
+                        </div>
+                        <button className="form_loginbutton">Log in</button>
+
+                    </form>
+                
+
+                <p>Don't have an account? <button className="form_signupbutton" onClick={() => {
+                    document.getElementById('signup-form').classList.toggle('show');
+                    document.getElementById('customer_wrapper').style.display = 'none';
+                }}>Sign up</button></p></div>
+                <div id="signup-form" className="signup-form">
+                    <h1>Signup</h1>
+                    <form>
+                        <div className="form_group">
+                            <label htmlFor="signup-email">E-mail:</label>
+                            <input type="email" id="signup-email" name="email" required />
+                        </div>
+                        <div className="form_group">
+                            <label htmlFor="signup-password">Password:</label>
+                            <input type="password" id="signup-password" name="password" required />
+                        </div>
+                        <div className="form_group">
+                            <label htmlFor="signup-confirm">Confirm Password:</label>
+                            <input type="password" id="signup-confirm" name="confirm" required />
+                        </div>
+                        <button className="form_loginbutton">Create Account</button>
+                    </form>
+                </div>    </div>
+            <Footer />
+
+
+
+
+
         </>
     )
 }
