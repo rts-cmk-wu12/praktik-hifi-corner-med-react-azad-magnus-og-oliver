@@ -73,7 +73,11 @@ async function importData() {
 // When Run is called, it will connect to the db.
 async function run() {
     try {
-        await mongoose.connect(uri);
+        await mongoose.connect(uri, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            serverSelectionTimeoutMS: 50000
+        });
         console.log("Connected to MongoDB");
 
         await importData();
@@ -82,7 +86,7 @@ async function run() {
     }
 }
 
-run();
+run().then(r => console.log(r));
 
 // All GET routes to retrieve relevant data
 app.get("/products", async (req, res) => {
