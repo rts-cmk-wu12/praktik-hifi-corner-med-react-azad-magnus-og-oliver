@@ -14,6 +14,6 @@ import { GrLocation as LocationMark} from "react-icons/gr";
 
 import { LuPhone as Phone } from "react-icons/lu";
 import { TfiEmail as Email } from "react-icons/tfi";
+import { IoMailSharp as Email2 } from "react-icons/io5";
 
-
-export {Visa, MasterCard, PayPal, Search, Jcb, Facebook, Youtube, Twitter, LinkedIN, Account, Cart, LocationMark, Phone, Email, WorldPay, Instagram}
+export {Visa, MasterCard, PayPal, Search, Jcb, Facebook, Youtube, Twitter, LinkedIN, Account, Cart, LocationMark, Phone, Email, WorldPay, Instagram, Email2}
