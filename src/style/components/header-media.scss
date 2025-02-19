@@ -55,6 +55,7 @@
     height: 3px;
     background-color: white;
     transition: all 0.3s ease-in-out;
+    position: relative;
 
     &.open:nth-child(1) {
       transform: rotate(45deg) translate(7px, 7px);
@@ -84,13 +85,14 @@
     }
 
     &__button {
-      font-size: 8px;
+      font-size: 12px;
       padding: 0.3em;
     }
   }
 
   .navbar {
     padding: 2.5em;
+    align-items: start;
     font-size: 11px;
 
     &__list {
