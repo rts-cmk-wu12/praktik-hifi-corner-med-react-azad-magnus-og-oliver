@@ -119,6 +119,6 @@ const signalHandler = async (signal)  => {
 ["SIGINT", "SIGTERM", "SIGQUIT"].forEach(signal => process.on(signal, signalHandler))
 
 
-app.listen(3000,() => {
+app.listen(3000, "0.0.0.0", () => {
     console.log("Running on port: http://localhost:3000 ");
 });
