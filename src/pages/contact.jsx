@@ -14,7 +14,6 @@ const Contact = () => {
 
 <Navbar />
 
-<div className="background-img-to-contact-page">
           <h1 className="headline-in-contact">Get in Touch </h1>
        <div className="contact-information-section">
   
@@ -60,7 +59,7 @@ const Contact = () => {
     </div>
 </div>
 </div>
-</div>
+
 <Footer/>
         </>
     )
