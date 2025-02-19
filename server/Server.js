@@ -6,6 +6,8 @@ import fs from "fs";
 import Manufacturer from "./model/Manufacturer.js";
 import Product from "./model/Products.js";
 import dotenv from "dotenv";
+import path from "path";
+import {fileURLToPath} from "url";
 dotenv.config({path: "./Server/.env"});
 
 
@@ -19,6 +21,11 @@ app.use(express.json());
 app.use(cors({
     origin: true,
 }));
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.use(limiter);
@@ -29,7 +36,7 @@ const uri = `mongodb+srv://randomacc12411:${API_KEY}@cluster0.y0nio.mongodb.net/
 // ImportData into "mongodb" using fs.
 async function importData() {
     try {
-        const rawData = fs.readFileSync("./data/db.json", "utf8");
+        const rawData = fs.readFileSync("./server/data/db.json", "utf8");
         const data = JSON.parse(rawData);
 
         console.log("Importing data...");
