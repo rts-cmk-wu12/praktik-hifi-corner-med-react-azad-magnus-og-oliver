@@ -85,5 +85,6 @@ export const ShopProductCard = ({onSearch}) => { // onSearch is now a search ter
                             </div>))) : (<p>No products found.</p>)}
                 </div>
             </div>
-        </>);
-};
+        </>
+    )
+}
