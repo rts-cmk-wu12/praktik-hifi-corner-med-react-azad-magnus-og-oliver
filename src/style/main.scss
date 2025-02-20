@@ -208,7 +208,6 @@
   }
 
   &__summary-subtotal,
-  &__summary-shipping,
   &__summary-total {
     display: flex;
     justify-content: space-between;
@@ -247,4 +246,49 @@
       background-color: #7e714a;
     }
   }
+
+  &__item {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 1rem;
+  
+      &-image {
+        width: 200px;
+        height: 120px;
+        margin-right: 1rem;
+      }
+  
+      &-details {
+        flex-grow: 1;
+      }
+  
+      &-title {
+        font-family: 'Museo Sans Rounded 300';
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+  
+      &-price {
+        font-family: 'Museo Sans Rounded 300';
+        color: #666;
+      }
+  
+      &-remove {
+        padding: 0.5rem 1rem;
+        background-color: #ff4444;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-family: 'Museo Sans Rounded 300';
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #cc0000;
+        }
+      }
+    }
+  
 }
