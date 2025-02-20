@@ -49,6 +49,19 @@ export const ShopProductCard = ({ onSearch }) => { // onSearch is now a search t
                     <h1 className="healine-in-shop-category">Amplifiers</h1>
                 </div>
 
+        <div className="text-top-left">
+            <p>Home / Amplifiers</p>
+        </div>
+
+
+
+<div className="main-shop">
+
+
+<div>
+<h1 className="healine-in-shop-category">Amplifiers</h1>
+</div>
+
                 <div className="filters-under-headline">
                     <div>
                         <p className="filters-under-headline__text">
