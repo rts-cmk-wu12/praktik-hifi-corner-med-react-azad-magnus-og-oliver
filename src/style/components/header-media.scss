@@ -37,7 +37,7 @@
 
       &.open {
         opacity: 1;
-        height: auto;
+        height: 100%;
         margin: auto;
         padding: 1em 0;
       }
@@ -60,7 +60,6 @@
     height: 3px;
     background-color: white;
     transition: all 0.3s ease-in-out;
-    position: relative;
 
     &.open:nth-child(1) {
       transform: rotate(45deg) translate(7px, 7px);
