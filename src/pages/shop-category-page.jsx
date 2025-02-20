@@ -1,13 +1,14 @@
 import SearchNav from "../components/searchnav"
-import frontpageimge from "/design/hifi-shop-category-list.png"
+import {ShopProductCard} from "../components/ShopProductCard.jsx";
 const ShopCategoryPage = () => {
     return (
         <>
         <SearchNav/>
         <div>
+            <ShopProductCard/>
         </div>
         </>
     )
 }
 
-export default ShopCategoryPage
+export default ShopCategoryPage;
