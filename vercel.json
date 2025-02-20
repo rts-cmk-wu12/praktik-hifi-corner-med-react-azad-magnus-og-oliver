@@ -1,48 +1,6 @@
 {
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/"
-    },
-    {
-      "source": "/about-us",
-      "destination": "/"
-    },
-    {
-      "source": "/brand-page",
-      "destination": "/"
-    },
-    {
-      "source": "/blog",
-      "destination": "/"
-    },
-    {
-      "source": "/events",
-      "destination": "/"
-    },
-    {
-      "source": "/shop-page",
-      "destination": "/"
-    },
-    {
-      "source": "/contact",
-      "destination": "/"
-    },
-    {
-      "source": "/subscribe",
-      "destination": "/"
-    },
-    {
-      "source": "/account",
-      "destination": "/"
-    },
-    {
-      "source": "/cart",
-      "destination": "/"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/404"
-    }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "status": 404, "dest": "/404" }
   ]
 }
