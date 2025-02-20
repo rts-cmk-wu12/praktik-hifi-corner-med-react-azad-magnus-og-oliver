@@ -24,13 +24,34 @@ export const ShopProductCard = () => {
         <div className="text-top-left">
             <p>Home / Amplifiers</p>
         </div>
+
+
+
+<div className="main-shop">
+
+
 <div>
-<h1>Amplifiers</h1>
+<h1 className="healine-in-shop-category">Amplifiers</h1>
 </div>
 
+<div className="filters-under-headline">
 
+<div>
+<p className="filters-under-headline__text">sort by: <select name="sort" id="sort-select" >
+<option value=""> Please choose an option</option>    
+<option value="Price"> Price</option>  
+<option value="Name"> Name</option>  
+</select></p>
+</div>
 
+<div> 
+<p className="filters-under-headline__text">show: <select name="sort" id="sort-select" >
+<option value=""> Please choose an option</option>    
+<option value="Price"></option>  
+</select></p>
+</div>
 
+</div>
             <div className="shopProductCard">
                 {products && products.length > 0 && (
                     products.map(product => (
@@ -47,10 +68,14 @@ export const ShopProductCard = () => {
                             )}
                             <button className="shopProductCard__add">Add to Cart</button>
                         </div>
+                        
                     ))
                 )
                 }
             </div>
+            </div>
+
+            
         </>
     )
 }
