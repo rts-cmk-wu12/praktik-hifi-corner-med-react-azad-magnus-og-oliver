@@ -92,6 +92,9 @@ export const ShopProductCard = ({ onSearch }) => { // onSearch is now a search t
                     )}
                 </div>
             </div>
+            </div>
+
+            
         </>
     );
 };
