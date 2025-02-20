@@ -1,4 +1,4 @@
-const isProduction = window.location.hostname.includes('onrender.com');
+const isProduction = window.location.hostname.includes('localhost');
 export const apiUrl = isProduction
-    ? 'to-be-edited'  // Production URL
-    : 'http://localhost:3000';
+    ? 'http://localhost:3000/'  // Production URL
+    : 'https://praktik-hifi-corner-med-react-azad-magnus-og-oliver.vercel.app/';

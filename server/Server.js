@@ -1,12 +1,15 @@
-import mongoose, { Schema, model } from "mongoose";
+import mongoose, {Schema, model} from "mongoose";
 import express from "express";
-import { rateLimit } from "express-rate-limit";
+import {rateLimit} from "express-rate-limit";
 import cors from "cors";
 import fs from "fs";
 import Manufacturer from "./model/Manufacturer.js";
 import Product from "./model/Products.js";
 import dotenv from "dotenv";
-dotenv.config({path: "./Server/.env"});
+import path from "path";
+import {fileURLToPath} from "url";
+
+dotenv.config({path: "./.env"});
 
 
 const app = express();
@@ -19,6 +22,11 @@ app.use(express.json());
 app.use(cors({
     origin: true,
 }));
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.use(limiter);
@@ -35,7 +43,7 @@ async function importData() {
         console.log("Importing data...");
 
         for (const manufacturer of data.manufacturers) {
-            const existingManufacturer = await Manufacturer.findOne({ id: manufacturer.id });
+            const existingManufacturer = await Manufacturer.findOne({id: manufacturer.id});
 
             if (!existingManufacturer) {
                 await Manufacturer.create(manufacturer);
@@ -46,7 +54,7 @@ async function importData() {
         }
 
         for (const product of data.products) {
-            const existingProduct = await Product.findOne({ id: product.id });
+            const existingProduct = await Product.findOne({id: product.id});
 
             if (!existingProduct) {
                 await Product.create(product);
@@ -64,7 +72,9 @@ async function importData() {
 // When Run is called, it will connect to the db.
 async function run() {
     try {
-        await mongoose.connect(uri);
+        await mongoose.connect(uri, {
+            serverSelectionTimeoutMS: 50000
+        });
         console.log("Connected to MongoDB");
 
         await importData();
@@ -73,8 +83,7 @@ async function run() {
     }
 }
 
-run();
-
+run().then(_r => console.log("Ran operation"))
 // All GET routes to retrieve relevant data
 app.get("/products", async (req, res) => {
     try {
@@ -82,7 +91,7 @@ app.get("/products", async (req, res) => {
         return res.json(data);
     } catch (error) {
         console.log(error);
-        return res.status(500).json({ error: 'Error fetching products' });
+        return res.status(500).json({error: 'Error fetching products'});
     }
 });
 
@@ -92,14 +101,13 @@ app.get("/manufacturer", async (req, res) => {
         return res.json(data);
     } catch (error) {
         console.log(error);
-        return res.status(500).json({ error: 'Error fetching manufacturers' });
+        return res.status(500).json({error: 'Error fetching manufacturers'});
     }
 });
 
 
-
 // In case of if its terminated externally via ctrl + c  then disconnect from MongoDB.
-const signalHandler = async (signal)  => {
+const signalHandler = async (signal) => {
     await mongoose.disconnect();
     console.log("MongoDB disconnected successfully." + signal);
     process.exit(0);
@@ -108,6 +116,6 @@ const signalHandler = async (signal)  => {
 ["SIGINT", "SIGTERM", "SIGQUIT"].forEach(signal => process.on(signal, signalHandler))
 
 
-app.listen(3000,() => {
+app.listen(3000, "0.0.0.0", () => {
     console.log("Running on port: http://localhost:3000 ");
 });

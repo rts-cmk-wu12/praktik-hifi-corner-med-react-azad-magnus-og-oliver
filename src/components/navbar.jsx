@@ -1,6 +1,6 @@
 import '../style/components/header.scss'
 import '../style/components/header-media.scss'
-import { LocationMark, Phone, Email } from '../GetIcons.jsx'
+import { LocationMark, Phone, Email, Email2 } from '../GetIcons.jsx'
 import { NavLink } from 'react-router'
 import { useState } from 'react'
 
@@ -22,7 +22,7 @@ function Navbar() {
                     <p><Email /></p>
                     </NavLink>
             
-                    <NavLink to="/subscribe" className="topnav__button"><Email /><span className="topnav__black-line">|</span>Subscribe
+                    <NavLink to="/subscribe" className="topnav__button"><Email2 className='topnav__button-email' /><span className="topnav__black-line">|</span>Subscribe
                     </NavLink>
                 </div>
                 <nav className="navbar">
