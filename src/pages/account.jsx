@@ -10,7 +10,7 @@ const Account = () => {
             <div class="customer_info">
                 <div id="customer_wrapper" className="customer_wrapper">
                     <h1>Log in</h1>
-                    <form>
+                    <form method="post">
                         <div id="form_group" class="form_group">
                             <label for="name">E-mail:</label>
                             <input type="text" id="name" name="name" required />
