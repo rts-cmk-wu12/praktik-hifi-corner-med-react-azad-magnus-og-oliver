@@ -20,6 +20,17 @@ export const ShopProductCard = () => {
 
     return (
         <>
+
+        <div className="text-top-left">
+            <p>Home / Amplifiers</p>
+        </div>
+<div>
+<h1>Amplifiers</h1>
+</div>
+
+
+
+
             <div className="shopProductCard">
                 {products && products.length > 0 && (
                     products.map(product => (
@@ -28,11 +39,11 @@ export const ShopProductCard = () => {
                             <h2 className="shopProductCard__title">{product.title}</h2>
                             {product.discountedPrice ? (
                                 <div className="shopProductCard__discount">
-                                    <p className="shopProductCard__discount-originalPrice">{product.price}</p>
-                                    <p className="shopProductCard__discount-originalPrice">{product.discountedPrice}</p>
+                                    <p className="shopProductCard__discount-originalPrice">£{product.price}</p>
+                                    <p className="shopProductCard__discount-discountedPrice">£{product.discountedPrice}</p>
                                 </div>
                             ) : (
-                                <p className="shopProductCard__originalPrice">{product.price}</p>
+                                <p className="shopProductCard__originalPrice">£{product.price}</p>
                             )}
                             <button className="shopProductCard__add">Add to Cart</button>
                         </div>
