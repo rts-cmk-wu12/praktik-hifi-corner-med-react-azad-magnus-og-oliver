@@ -37,11 +37,11 @@ const Account = () => {
                             <input type="email" id="signup-email" name="email" required />
                         </div>
                         <div className="form_group">
-                            <label htmlFor="signup-password">Password:</label>
-                            <input type="password" id="signup-password" name="password" required />
+                            <label htmlFor="signup-username">Username:</label>
+                            <input type="name" id="signup-name" name="name" required />
                         </div>
                         <div className="form_group">
-                            <label htmlFor="signup-confirm">Confirm Password:</label>
+                            <label htmlFor="signup-confirm">Password:</label>
                             <input type="password" id="signup-confirm" name="confirm" required />
                         </div>
                         <button className="form_loginbutton">Create Account</button>
