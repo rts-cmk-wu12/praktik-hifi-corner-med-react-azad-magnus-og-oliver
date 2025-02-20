@@ -46,45 +46,48 @@ export const ShopProductCard = ({onSearch}) => { // onSearch is now a search ter
                     <h1 className="healine-in-shop-category">Amplifiers</h1>
                 </div>
 
+<div className="filters-under-headline">
 
+<div>
+<p className="filters-under-headline__text">sort by: <select name="sort" id="sort-select" >
+<option value=""> Please choose an option</option>    
+<option value="Price"> Price</option>  
+<option value="Name"> Name</option>  
+</select></p>
+</div>
 
-                <div className="filters-under-headline">
-                <div>
-                    <p className="filters-under-headline__text">sort by: <select name="sort" id="sort-select">
-                        <option value=""> Please choose an option</option>
-                        <option value="Price"> Price</option>
-                        <option value="Name"> Name</option>
-                    </select></p>
-                </div>
+<div> 
+<p className="filters-under-headline__text">show: <select name="sort" id="sort-select" >
+<option value=""> Please choose an option</option>    
+<option value="Price"></option>  
+</select></p>
+</div>
 
-                <div>
-                    <p className="filters-under-headline__text">show: <select name="sort" id="sort-select">
-                        <option value=""> Please choose an option</option>
-                        <option value="Price"></option>
-                    </select></p>
-                </div></div>
-
-
-                <div className="shopProductCard">
-                    {filteredProducts.length > 0 ? (filteredProducts.map((product) => (
-                            <div className="shopProductCard__details" key={product.id}>
-                                <Link to={`/product/${product.id}`}><img
-                                    className="shopProductCard__image"
-                                    src={"/" + product.imageSrc}
-                                    alt={product.category}
-                                    />
-                                </Link>
-                                <h2 className="shopProductCard__title">{product.title}</h2>
-                                {product.discountedPrice ? (<div className="shopProductCard__discount">
-                                        <p className="shopProductCard__discount-originalPrice">£{product.price}</p>
-                                        <p className="shopProductCard__discount-discountedPrice">£{product.discountedPrice}</p>
-                                    </div>) : (<p className="shopProductCard__originalPrice">£{product.price}</p>)}
-                                <button className="shopProductCard__add" onClick={() => addToCart(product)}>
-                                    Add to Cart
-                                </button>
-                            </div>))) : (<p>No products found.</p>)}
-                </div>
+</div>
+            <div className="shopProductCard">
+                {products && products.length > 0 && (
+                    products.map(product => (
+                        <div className="shopProductCard__details" key={product.id}>
+                            <img className="shopProductCard__image" src={"/" + product.imageSrc} alt={product.category}/>
+                            <h2 className="shopProductCard__title">{product.title}</h2>
+                            {product.discountedPrice ? (
+                                <div className="shopProductCard__discount">
+                                    <p className="shopProductCard__discount-originalPrice">£{product.price}</p>
+                                    <p className="shopProductCard__discount-discountedPrice">£{product.discountedPrice}</p>
+                                </div>
+                            ) : (
+                                <p className="shopProductCard__originalPrice">£{product.price}</p>
+                            )}
+                            <button className="shopProductCard__add">Add to Cart</button>
+                        </div>
+                        
+                    ))
+                )
+                }
             </div>
+            </div>
+
+            
         </>
     )
 }
