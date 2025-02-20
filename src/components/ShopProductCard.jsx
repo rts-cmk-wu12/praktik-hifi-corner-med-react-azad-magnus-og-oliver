@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import { apiUrl } from "../utility/ProductionSites.jsx";
+import {useEffect, useState} from "react";
+import {apiUrl} from "../utility/ProductionSites.jsx";
+import {Link} from "react-router";
 import "../style/components/ShopProductCard.scss";
 import SearchNav from "./searchnav.jsx";
 export const ShopProductCard = () => {
@@ -97,14 +98,16 @@ export const ShopProductCard = () => {
                             ) : (
                                 <p className="shopProductCard__originalPrice">£{product.price}</p>
                             )}
-                            <button className="shopProductCard__add" onClick={() => addToCart(product)}>Add to Cart</button>
+                            <Link to={`/product/${product["id"]}`}>  <button className="shopProductCard__add" onClick={() => addToCart(product)}>Add to Cart</button></Link>
                         </div>
-
+                        
                     ))
                 )
                 }
             </div>
             </div>
+
+            
         </>
     )
 }
