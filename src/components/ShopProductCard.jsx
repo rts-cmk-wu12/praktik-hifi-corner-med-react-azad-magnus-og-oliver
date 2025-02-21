@@ -6,8 +6,8 @@ import "../style/components/ShopProductCard.scss";
 export const ShopProductCard = ({onSearch}) => {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
-    const [sortBy, setSortBy] = useState("");
-    const [itemsPerPage, setItemsPerPage] = useState(12);
+    const [sortBy, setSortBy] = useState("All");
+    const [itemsPerPage, setItemsPerPage] = useState(100);
 
     useEffect(() => {
         async function fetchProducts() {
