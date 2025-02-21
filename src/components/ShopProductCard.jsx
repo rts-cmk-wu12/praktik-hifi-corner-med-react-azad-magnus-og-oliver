@@ -46,6 +46,7 @@ export const ShopProductCard = ({onSearch}) => { // onSearch is now a search ter
                     <h1 className="healine-in-shop-category">Amplifiers</h1>
                 </div>
 
+<<<<<<< HEAD
 <div className="filters-under-headline">
 
 <div>
@@ -55,6 +56,8 @@ export const ShopProductCard = ({onSearch}) => { // onSearch is now a search ter
 <option value="Name"> Name</option>  
 </select></p>
 </div>
+=======
+>>>>>>> fixed
 
 <div> 
 <p className="filters-under-headline__text">show: <select name="sort" id="sort-select" >
@@ -85,8 +88,6 @@ export const ShopProductCard = ({onSearch}) => { // onSearch is now a search ter
                 )
                 }
             </div>
-            </div>
-
             
         </>
     )
