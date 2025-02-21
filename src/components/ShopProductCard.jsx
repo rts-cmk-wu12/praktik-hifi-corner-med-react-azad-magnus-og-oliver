@@ -46,25 +46,19 @@ export const ShopProductCard = ({onSearch}) => { // onSearch is now a search ter
                     <h1 className="healine-in-shop-category">Amplifiers</h1>
                 </div>
 
-<<<<<<< HEAD
-<div className="filters-under-headline">
 
-<div>
-<p className="filters-under-headline__text">sort by: <select name="sort" id="sort-select" >
-<option value=""> Please choose an option</option>    
-<option value="Price"> Price</option>  
-<option value="Name"> Name</option>  
-</select></p>
-</div>
-=======
->>>>>>> fixed
-
-<div> 
-<p className="filters-under-headline__text">show: <select name="sort" id="sort-select" >
-<option value=""> Please choose an option</option>    
-<option value="Price"></option>  
-</select></p>
-</div>
+                <div className="filters-under-headline">
+                    <div>
+                        <p className="filters-under-headline__text">
+                            Sort by:
+                            <select name="sort" id="sort-select">
+                                <option value="">Please choose an option</option>
+                                <option value="Price">Price</option>
+                                <option value="Name">Name</option>
+                            </select>
+                        </p>
+                    </div>
+                </div>
 
 </div>
             <div className="shopProductCard">
