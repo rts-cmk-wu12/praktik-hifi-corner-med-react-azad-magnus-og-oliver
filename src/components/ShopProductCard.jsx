@@ -66,11 +66,12 @@ export const ShopProductCard = ({ onSearch }) => { // onSearch is now a search t
                     {filteredProducts.length > 0 ? (
                         filteredProducts.map((product) => (
                             <div className="shopProductCard__details" key={product.id}>
-                                <img
+                                <Link to={`/product/${product.id}`}>
                                     className="shopProductCard__image"
                                     src={"/" + product.imageSrc}
                                     alt={product.category}
                                 />
+                                </Link>
                                 <h2 className="shopProductCard__title">{product.title}</h2>
                                 {product.discountedPrice ? (
                                     <div className="shopProductCard__discount">
@@ -80,11 +81,9 @@ export const ShopProductCard = ({ onSearch }) => { // onSearch is now a search t
                                 ) : (
                                     <p className="shopProductCard__originalPrice">£{product.price}</p>
                                 )}
-                                <Link to={`/product/${product.id}`}>
                                     <button className="shopProductCard__add" onClick={() => addToCart(product)}>
                                         Add to Cart
                                     </button>
-                                </Link>
                             </div>
                         ))
                     ) : (
