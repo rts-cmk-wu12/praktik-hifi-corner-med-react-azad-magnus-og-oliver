@@ -5,11 +5,18 @@ import Logo from "../img/logo-white.svg";
 import "../style/main.scss";
 import { useState } from 'react';
 
-function SearchNav() {
+function SearchNav({onSearch}) {
     const [isOpen, setIsOpen] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('');
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+
+    const handleSearch = (e) => {
+        const value = e.target.value;
+        setSearchTerm(value);
+        onSearch(value);
     };
 
     return (
@@ -17,12 +24,17 @@ function SearchNav() {
             <header>
                 <div className="searchnav__topnav">
                     <div className="searchnav__logo">
-                       
-                         <NavLink to={"/"}><img src={Logo} alt="hifi logo" /></NavLink>
+                        <NavLink to={"/"}><img src={Logo} alt="hifi logo" /></NavLink>
                     </div>
                     <div className="searchnav__search">
                         <div className="searchnav__input-wrapper">
-                            <input type="text" className="searchnav__input" placeholder="Search the entire store here..." />
+                            <input
+                                type="text"
+                                className="searchnav__input"
+                                placeholder="Search the entire store here..."
+                                value={searchTerm}
+                                onChange={handleSearch}
+                            />
                             <div className="searchnav__icon searchnav__icon--inside">
                                 <Search />
                             </div>

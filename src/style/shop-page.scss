@@ -11,6 +11,7 @@
   justify-content: start;
   margin: 0 auto;
   max-width: 900px;
+
   min-height: 100vh;
   font-family: "Museo Sans Rounded 700";
 
@@ -64,7 +65,7 @@
     padding: 10px 20px;
     text-align: center;
     font-weight: bold;
-    transition: 1s cubic-bezier(.51,.59,.52,1);
+    transition: 1s cubic-bezier(0.51, 0.59, 0.52, 1);
     font-size: 1rem;
     cursor: pointer;
   }
