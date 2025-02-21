@@ -5,7 +5,7 @@ import Logo from "../img/logo-white.svg";
 import "../style/main.scss";
 import { useState } from 'react';
 
-function SearchNav({ onSearch, onKeyDown }) {
+function SearchNav({onSearch}) {
     const [isOpen, setIsOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -34,7 +34,6 @@ function SearchNav({ onSearch, onKeyDown }) {
                                 placeholder="Search the entire store here..."
                                 value={searchTerm}
                                 onChange={handleSearch}
-                                onKeyDown={onKeyDown}
                             />
                             <div className="searchnav__icon searchnav__icon--inside">
                                 <Search />
