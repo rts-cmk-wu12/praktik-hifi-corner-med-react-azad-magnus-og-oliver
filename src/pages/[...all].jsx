@@ -1,6 +1,6 @@
 import Navbar from "../components/navbar.jsx";
 import Footer from "../components/footer.jsx";
-import {ErrorPageComponent} from "../components/errorpage.jsx";
+import {CustomPageComponent} from "../components/custompage.jsx";
 
 
 
@@ -8,7 +8,7 @@ const ErrorPage = () => {
     return (
         <>
             <Navbar />
-            <ErrorPageComponent />
+            <CustomPageComponent redirect={"/"} title={"404 - Not Found"} description={"The page you are looking for doesn't exist."} home={"Go Home"} />
             <Footer/>
         </>
     )

@@ -3,9 +3,11 @@ import {apiUrl} from "../utility/ProductionSites.jsx";
 import {Link} from "react-router-dom";
 import "../style/components/ShopProductCard.scss";
 
-export const ShopProductCard = ({onSearch}) => { // onSearch is now a search term, not a function
+export const ShopProductCard = ({onSearch}) => {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
+    const [sortBy, setSortBy] = useState("All");
+    const [itemsPerPage, setItemsPerPage] = useState(100);
 
     useEffect(() => {
         async function fetchProducts() {
@@ -29,7 +31,19 @@ export const ShopProductCard = ({onSearch}) => { // onSearch is now a search ter
         }
     }, [onSearch, products]);
 
-
+    useEffect(() => {
+        const sorted = [...filteredProducts];
+        if (sortBy === "Price") {
+            sorted.sort((a, b) => a.price - b.price);
+        }
+        if (sortBy === "Name") {
+            sorted.sort((a, b) => a.title.localeCompare(b.title));
+        }
+        if (sortBy === "All") {
+            return setFilteredProducts(products);
+        }
+        setFilteredProducts(sorted);
+    }, [sortBy, products, filteredProducts]);
     const addToCart = (product) => {
         const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
         const updatedCart = [...existingCart, product];
@@ -46,27 +60,39 @@ export const ShopProductCard = ({onSearch}) => { // onSearch is now a search ter
                     <h1 className="healine-in-shop-category">Amplifiers</h1>
                 </div>
 
-
-
                 <div className="filters-under-headline">
                 <div>
-                    <p className="filters-under-headline__text">sort by: <select name="sort" id="sort-select">
+                    <p className="filters-under-headline__text">sort by: <select 
+                        name="sort" 
+                        id="sort-select" 
+                        value={sortBy}
+                        onChange={(e) => setSortBy(e.target.value)}
+                    >
                         <option value=""> Please choose an option</option>
                         <option value="Price"> Price</option>
                         <option value="Name"> Name</option>
+                        <option value="All"> All</option>
                     </select></p>
                 </div>
 
                 <div>
-                    <p className="filters-under-headline__text">show: <select name="sort" id="sort-select">
+                    <p className="filters-under-headline__text">show: <select 
+                        name="sort" 
+                        id="sort-select"
+                        value={itemsPerPage}
+                        onChange={(e) => setItemsPerPage(Number(e.target.value))}
+                    >
                         <option value=""> Please choose an option</option>
-                        <option value="Price"></option>
+                        <option value="6">6</option>
+                        <option value="12">12</option>
+                        <option value="24">24</option>
+                        <option value="100">All</option>                 
                     </select></p>
                 </div></div>
 
-
                 <div className="shopProductCard">
-                    {filteredProducts.length > 0 ? (filteredProducts.map((product) => (
+                    {filteredProducts.slice(0, itemsPerPage).length > 0 ? (
+                        filteredProducts.slice(0, itemsPerPage).map((product) => (
                             <div className="shopProductCard__details" key={product.id}>
                                 <Link to={`/product/${product.id}`}><img
                                     className="shopProductCard__image"
