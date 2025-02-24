@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { apiUrl } from "../utility/ProductionSites.jsx";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { apiUrl } from "../utility/ProductionSites.jsx";
+import { Link } from "react-router-dom";
 import "../style/components/ShopProductCard.scss";
 
 export const ShopProductCard = ({ onSearch }) => {
@@ -20,7 +23,20 @@ export const ShopProductCard = ({ onSearch }) => {
         console.error("Error fetching products:", error);
       }
     }
+  useEffect(() => {
+    async function fetchProducts() {
+      try {
+        const response = await fetch(apiUrl + "products");
+        const jsonData = await response.json();
+        setProducts(jsonData);
+        setFilteredProducts(jsonData);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    }
 
+    fetchProducts();
+  }, []);
     fetchProducts();
   }, []);
 
@@ -52,6 +68,11 @@ export const ShopProductCard = ({ onSearch }) => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
+  return (
+    <>
+      <div className="text-top-left">
+        <p>Home / Amplifiers</p>
+      </div>
   return (
     <>
       <div className="text-top-left">

@@ -25,6 +25,8 @@
     object-fit: contain;
     border: 1px solid rgb(216, 207, 207);
     margin-bottom: 10px;
+    border: 1px solid rgb(216, 207, 207);
+    margin-bottom: 10px;
   }
   &__add {
     display: flex;
@@ -34,6 +36,7 @@
     height: 25px;
     border: none;
     font-size: 1.025rem;
+    cursor: pointer;
     cursor: pointer;
     margin-top: 20px;
     color: config.$WhiteFontColor;
