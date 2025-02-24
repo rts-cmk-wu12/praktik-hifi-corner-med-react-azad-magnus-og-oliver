@@ -5,7 +5,6 @@ import { ShopProductCard } from "../components/ShopProductCard";
 
 const ShopCategoryPage = () => {
     const [searchTerm, setSearchTerm] = useState("");
-
     return (
         <>
             <SearchNav onSearch={setSearchTerm} />
