@@ -81,3 +81,12 @@
   font-family: "Museo Sans Rounded 700";
   text-transform: uppercase;
 }
+
+@media (max-width: 450px) {
+  .filters-under-headline {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+  }
+}
