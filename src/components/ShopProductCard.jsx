@@ -1,9 +1,9 @@
 import {useState, useEffect} from "react";
-import {apiUrl} from "../utility/ProductionSites.jsx";
-import {FilterOptions} from "./FilterOptions.jsx";
-import {ProductList} from "./ProductList.jsx";
-import {Breadcrumbs} from "./Breadcrumbs.jsx";
-import "../style/components/ShopProductCard.scss";
+import {apiUrl} from "~utility/ProductionSites.jsx";
+import {FilterOptions} from "~components/FilterOptions.jsx";
+import {ProductList} from "~components/ProductList.jsx";
+import {Breadcrumbs} from "~components/Breadcrumbs.jsx";
+import "~style/components/ShopProductCard.scss";
 
 export const ShopProductCard = ({onSearch}) => {
     const [state, setState] = useState({

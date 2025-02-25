@@ -1,6 +1,6 @@
-import "../style/returns-refunds.scss";
-import Footer from "../components/footer"
-import Navbar from "../components/navbar"
+import "~style/returns-refunds.scss";
+import Footer from "~components/footer"
+import Navbar from "~components/navbar"
 
 
 const ReturnPage = () => {

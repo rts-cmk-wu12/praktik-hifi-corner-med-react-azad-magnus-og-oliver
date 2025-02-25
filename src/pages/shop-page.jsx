@@ -1,6 +1,6 @@
-import "../style/shop-page.scss";
-import Footer from "../components/footer"
-import Navbar from "../components/navbar"
+import "~style/shop-page.scss";
+import Footer from "~components/footer"
+import Navbar from "~components/navbar"
 import {Link} from 'react-router-dom';
 
 const ShopPage = () => {

@@ -1,4 +1,4 @@
-import "../style/components/footer.scss"
+import "~style/components/footer.scss"
 import { WorldPay, Visa, MasterCard, Jcb, PayPal } from "../GetIcons";
 import { Facebook, Youtube, Twitter, Instagram} from "../GetIcons";
 import { Link } from 'react-router-dom';
