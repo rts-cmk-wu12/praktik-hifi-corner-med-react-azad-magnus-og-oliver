@@ -2,9 +2,9 @@ import { CiPhone } from "react-icons/ci";
 import { CiLocationOn } from "react-icons/ci";
 import { CiClock2 } from "react-icons/ci";
 import { CiMail } from "react-icons/ci";
-import "../style/contact.scss";
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
+import "~style/contact.scss";
+import Navbar from "~components/navbar"
+import Footer from "~components/footer"
 
 
 const Contact = () => {

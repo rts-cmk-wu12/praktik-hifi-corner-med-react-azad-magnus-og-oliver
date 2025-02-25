@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import "../style/page/errorpage.scss";
+import "~style/page/errorpage.scss";
 
 export const CustomPageComponent = ({redirect, title, description, home}) => {
     return (

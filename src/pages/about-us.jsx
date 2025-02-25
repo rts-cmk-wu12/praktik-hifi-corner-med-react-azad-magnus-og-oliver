@@ -1,6 +1,6 @@
-import "../style/about-us.scss";
-import Footer from "../components/footer"
-import Navbar from "../components/navbar"
+import "~style/about-us.scss";
+import Footer from "~components/footer"
+import Navbar from "~components/navbar"
 
 
 

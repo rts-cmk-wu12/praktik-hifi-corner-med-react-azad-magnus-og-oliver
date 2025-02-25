@@ -1,9 +1,9 @@
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
-import '../style/events-page.scss'
-import event1 from '/src/img/event1.jpg'
-import event2 from '/src/img/event2.jpg'
-import event3 from '/src/img/event3.jpeg'
+import Navbar from '~components/navbar';
+import Footer from '~components/footer';
+import '~style/events-page.scss'
+import event1 from '~img/event1.jpg'
+import event2 from '~img/event2.jpg'
+import event3 from '~img/event3.jpeg'
 function Events() {
     return (
         <>

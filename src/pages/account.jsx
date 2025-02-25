@@ -1,6 +1,6 @@
-import "../style/account.scss";
-import Footer from "../components/footer"
-import SearchNav from "../components/searchnav"
+import "~style/account.scss";
+import Footer from "~components/footer"
+import SearchNav from "~components/searchnav"
 
 
 const Account = () => {

@@ -1,5 +1,5 @@
-import '../style/components/header.scss'
-import '../style/components/header-media.scss'
+import '~style/components/header.scss'
+import '~style/components/header-media.scss'
 import { LocationMark, Phone, Email, Email2 } from '../GetIcons.jsx'
 import { NavLink } from 'react-router'
 import { useState } from 'react'

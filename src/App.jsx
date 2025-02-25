@@ -1,7 +1,7 @@
 import {useRoutes} from "react-router";
 import routes from '~react-pages'
 import {Suspense} from "react";
-import {FallbackComponent} from "./components/FallbackComponent.jsx";
+import {FallbackComponent} from "~components/FallbackComponent.jsx";
 
 
 

@@ -1,6 +1,6 @@
-import Footer from "../components/footer";
-import Navbar from "../components/navbar";
-import "../style/blog.scss";
+import Footer from "~components/footer";
+import Navbar from "~components/navbar";
+import "~style/blog.scss";
 
 
 function Blog() {

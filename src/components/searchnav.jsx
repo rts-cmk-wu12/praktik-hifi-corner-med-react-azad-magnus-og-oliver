@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
-import "../style/components/searchnav.scss"
+import "~style/components/searchnav.scss"
 import { Account, Email, LocationMark, Phone, Cart, Search } from "../GetIcons";
-import Logo from "../img/logo-white.svg";
-import "../style/main.scss";
+import Logo from "~img/logo-white.svg";
+import "~style/main.scss";
+import {AmountOfItems} from "~components/AmountOfItems.jsx";
 import { useState } from 'react';
 
 function SearchNav({onSearch}) {
@@ -43,7 +44,7 @@ function SearchNav({onSearch}) {
 
                     <NavLink className={"link__account"} to={"/account"}><p className="searchnav__symbol-account"><Account /> <span className="searchnav__text">Account</span></p></NavLink>
                     <NavLink className={"link__cart"} to={"/cart"}><p className="searchnav__symbol-cart"><Cart /> <span className="searchnav__text">Cart</span></p></NavLink>
-
+                    <AmountOfItems></AmountOfItems>
 
                     <NavLink className={"searchnav__symbol-contact"} to="/contact">
                         <p className="searchnav__symbol"><LocationMark /></p>

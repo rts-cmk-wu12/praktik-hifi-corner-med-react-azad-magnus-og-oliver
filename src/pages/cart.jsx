@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import SearchNav from "../components/searchnav";
-import Footer from "../components/footer";
-import "../style/main.scss";
+import SearchNav from "~components/searchnav";
+import Footer from "~components/footer";
+import "~style/main.scss";
 
 function Cart() {
     const [cartItems, setCartItems] = useState([]);
