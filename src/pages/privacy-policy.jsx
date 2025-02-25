@@ -1,6 +1,6 @@
-import "../style/privacy-policy.scss";
-import Footer from "../components/footer"
-import Navbar from "../components/navbar"
+import "~style/privacy-policy.scss";
+import Footer from "~components/footer"
+import Navbar from "~components/navbar"
 
 
 const PrivacyPage = () => {

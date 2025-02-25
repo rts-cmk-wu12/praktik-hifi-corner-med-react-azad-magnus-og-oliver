@@ -1,8 +1,8 @@
-import Footer from "../components/footer"
-import Navbar from "../components/navbar"
-import brands from "../img/brands.png"
-import "../style/main.scss"
-import Logo from "../img/logo-white.svg"
+import Footer from "~components/footer"
+import Navbar from "~components/navbar"
+import brands from "~img/brands.png"
+import "~style/main.scss"
+import Logo from "~img/logo-white.svg"
 const BrandPage = () => {
     return (
         <>

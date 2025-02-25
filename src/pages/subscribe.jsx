@@ -1,7 +1,7 @@
   import React from 'react';
-  import '../style/subscribe-page.scss';
-  import Navbar from '../components/navbar';
-import Footer from '../components/footer';
+  import '~style/subscribe-page.scss';
+  import Navbar from '~components/navbar';
+import Footer from '~components/footer';
   const SubscribePage = () => {
     return (
       <>
