@@ -1,8 +1,9 @@
-import {defineConfig} from 'vite'
-import React from '@vitejs/plugin-react'
-import Pages from "vite-plugin-pages";
-import { ViteAliases} from "vite-aliases";
-// https://vite.dev/config/
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import Pages from 'vite-plugin-pages';
+import { ViteAliases } from 'vite-aliases';
+
+
 export default defineConfig({
-    plugins: [React(), Pages(), ViteAliases()]
+    plugins: [react(), Pages(), ViteAliases()],
 });
