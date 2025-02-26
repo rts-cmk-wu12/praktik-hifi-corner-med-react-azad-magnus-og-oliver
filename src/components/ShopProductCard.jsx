@@ -62,7 +62,6 @@ export const ShopProductCard = ({ onSearch }) => {
     <>
       <Breadcrumbs />
       <div className="main-shop">
-        <h1 className="healine-in-shop-category">Amplifiers</h1>
         <FilterOptions
           SortBy={state.sortBy}
           ItemPerPage={state.itemsPerPage}
