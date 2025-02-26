@@ -23,8 +23,8 @@
             "~/*": [
                 "src/*"
             ],
-            "~product/*": [
-                "src/pages/product/*"
+            "~tests/*": [
+                "src/tests/*"
             ]
         }
     }

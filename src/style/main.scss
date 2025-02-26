@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  background-color: white;
+}
+
 
 @keyframes fadeIn {
   0% {
@@ -290,5 +294,4 @@
         }
       }
     }
-  
 }

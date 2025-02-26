@@ -5,6 +5,7 @@ import Logo from "~img/logo-white.svg";
 import "~style/main.scss";
 import {AmountOfItems} from "~components/AmountOfItems.jsx";
 import { useState } from 'react';
+import {productNames} from "~utility/ProductNames.jsx";
 
 function SearchNav({onSearch}) {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,11 +32,20 @@ function SearchNav({onSearch}) {
                         <div className="searchnav__input-wrapper">
                             <input
                                 type="text"
+                                list={"products-list"}
                                 className="searchnav__input"
                                 placeholder="Search the entire store here..."
                                 value={searchTerm}
                                 onChange={handleSearch}
                             />
+                            <datalist id="products-list">
+                                {
+                                   productNames.map((product) => (
+                                       <option key={product.id} value={product}></option>
+                                   ))
+                                }
+                            </datalist>
+
                             <div className="searchnav__icon searchnav__icon--inside">
                                 <Search />
                             </div>
