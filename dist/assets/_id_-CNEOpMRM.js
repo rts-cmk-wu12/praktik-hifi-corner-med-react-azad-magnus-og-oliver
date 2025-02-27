@@ -1,0 +1,1 @@
+import{j as e,N as o,F as t}from"./index-Co0-gr8W.js";import{C as r}from"./custompage-BOWUUKB4.js";const n=()=>e.jsxs(e.Fragment,{children:[e.jsx(o,{}),e.jsx(r,{redirect:"/shop-category-page",title:"Page under-construction 🚧",description:"The page is in development, please click button to get to home-page.",home:"Go to Shop Items"}),e.jsx(t,{})]});export{n as default};

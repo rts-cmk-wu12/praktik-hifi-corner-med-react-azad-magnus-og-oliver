@@ -1,0 +1,1 @@
+import{j as o,N as e,F as r}from"./index-Co0-gr8W.js";import{C as t}from"./custompage-BOWUUKB4.js";const n=()=>o.jsxs(o.Fragment,{children:[o.jsx(e,{}),o.jsx(t,{redirect:"/",title:"404 - Not Found",description:"The page you are looking for doesn't exist.",home:"Go Home"}),o.jsx(r,{})]});export{n as default};
