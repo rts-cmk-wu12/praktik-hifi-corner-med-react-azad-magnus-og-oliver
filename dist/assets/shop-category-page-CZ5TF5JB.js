@@ -1,1 +1,0 @@
-import{j as r}from"./index-BooPJZoz.js";import{S as e}from"./searchnav-Bk7lEabO.js";const t=()=>r.jsxs(r.Fragment,{children:[r.jsx(e,{}),r.jsx("div",{children:"Shop Category Page"})]});export{t as default};
