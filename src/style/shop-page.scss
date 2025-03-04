@@ -1,0 +1,93 @@
+@use "variables" as config;
+
+.main-in-shop-page {
+  background-color: black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-content: start;
+  margin: 0 auto;
+  max-width: 900px;
+
+  min-height: 100vh;
+  font-family: "Museo Sans Rounded 700";
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(0.4);
+  }
+
+  .color-none {
+    filter: sepia(0);
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: config.$GoldFontColor;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    text-decoration: underline;
+    z-index: 2;
+  }
+
+  a {
+    color: white;
+    font-weight: bold;
+  }
+
+  .grid__items {
+    position: relative;
+    display: inline-block;
+  }
+
+  .button button {
+    background-color: #685325;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    transition: 1s cubic-bezier(0.51, 0.59, 0.52, 1);
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .button button:hover {
+    background-color: black;
+    scale: 1.225;
+  }
+}
+
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+}
